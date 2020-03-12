@@ -1,0 +1,39 @@
+#plan-personal-section {
+  background: #fff;
+  padding-top: 150px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#plan-personal-section .headline {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#plan-personal-section .big-red {
+  color: #933;
+}
+
+#plan-personal-section div:nth-of-type(3) {
+  margin-top: 10px;
+}
+
+#plan-personal-section .element::before {
+  counter-increment: element;
+  content: counter(element) ". ";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#plan-personal-section .img-container {
+  text-align: center;
+}
+
+#plan-personal-section img {
+  margin: 0 auto;
+}
+
+#plan-personal-section .trusa-row {
+  margin-bottom: 20px;
+}
