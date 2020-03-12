@@ -1,0 +1,19 @@
+.all-button svg {
+  margin-left: 7px;
+}
+
+.outline-button {
+  font-size: 14px;
+  color: #933;
+  border: 1px solid #ccc;
+  background: #ebebeb;
+  cursor: pointer;
+  height: 35px;
+  margin-top: 15px;
+}
+
+.outline-button:hover {
+  background: #933;
+  color: #fff;
+  border-color: #933;
+}

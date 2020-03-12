@@ -1,0 +1,136 @@
+
+#ghiduri-section {
+  padding-bottom: 80px;
+  padding-top: 150px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#ghiduri-section h3 {
+  text-transform: uppercase;
+  font-family: Roboto, serif;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+#ghiduri-section .guide-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 25px;
+  background-color: #fff;
+  position: relative;
+}
+
+#ghiduri-section .guide-icon object {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#ghiduri-section .ghid-content {
+  border: 1px solid #ccc;
+  background: #fff;
+  text-align: center;
+  height: 230px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#ghiduri-section .ghid-content:hover h3 {
+  color: #fff;
+  transition: all 0.15s ease-in-out;
+}
+
+#ghiduri-section a.ghid-content {
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  padding: 0;
+  display: block;
+}
+
+#ghiduri-section a.ghid-content:hover {
+  box-shadow: 5px 5px 2px #ccc;
+  background: #ff6766;
+  border-color: #933;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+
+#ghiduri-section .outline-button {
+  user-select: none;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.25;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+#ghiduri-section a.ghid-content:hover .outline-button {
+  border: 1px solid #fff;
+  color: #933;
+}
+
+#ghiduri-section a.ghid-content:hover .guide-icon {
+  border: none;
+}
+
+#ghiduri-section .guide-count {
+  position: absolute;
+  font-size: 12px;
+  color: #999;
+}
+
+#ghiduri-section a.ghid-content:hover .guide-count {
+  color: #fff;
+}
+
+#ghiduri-section .guide-count svg {
+  margin-right: 3px;
+}
+
+#ghiduri-section .count-foto {
+  right: 10px;
+  top: 5px;
+}
+
+#ghiduri-section .count-videos {
+  left: 10px;
+  top: 5px;
+}
+
+#ghiduri-section .ghid-row {
+  margin-bottom: 20px;
+}
+
+.all-button {
+  margin: 60px auto;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #933;
+  font-size: 14px;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.all-button:hover {
+  background: #dc3545;
+}

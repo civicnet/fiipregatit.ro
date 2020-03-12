@@ -24,7 +24,8 @@ $guide
   ->setLocation('post_type', '==', Constants::POST_TYPE_GUIDE);
 
 $guide
-  ->addText('Nume eveniment', [
+  ->addText('name', [
+    'label' => 'Nume eveniment',
     'placeholder' => 'Cutremur',
     'maxlength' => 128,
   ])
@@ -32,7 +33,8 @@ $guide
   ->setInstructions('Pentru ce fel de eveniment este ghidul (ex: cutremur, viscol, etc.)');
 
 $guide
-  ->addWysiwyg('Pregătire înaintea evenimentului', [
+  ->addWysiwyg('before', [
+    'label' => 'Pregătire înaintea evenimentului',
     'tabs' => 'all',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -40,7 +42,8 @@ $guide
   ->setInstructions('Care sunt pașii ce trebuie urmați înaintea evenimentului? Recomandăm folosirea opțiunii de listă pentru a enumera pașii.');
 
 $guide
-  ->addWysiwyg('Ce trebuie făcut în timpul evenimentului', [
+  ->addWysiwyg('during', [
+    'label' => 'Ce trebuie făcut în timpul evenimentului',
     'tabs' => 'all',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -48,7 +51,8 @@ $guide
   ->setInstructions('Cum reacționăm în timpul evenimentului? Recomandăm folosirea opțiunii de listă pentru a enumera pașii.');
 
 $guide
-  ->addWysiwyg('Pași de urmat după eveniment', [
+  ->addWysiwyg('after', [
+    'label' => 'Pași de urmat după eveniment',
     'tabs' => 'all',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -56,7 +60,8 @@ $guide
   ->setInstructions('Care sunt pașii ce trebuie urmați după ce a avut loc evenimentul? Recomandăm folosirea opțiunii de listă pentru a enumera pașii.');
 
 $guide
-  ->addWysiwyg('Informații adiționale', [
+  ->addWysiwyg('info', [
+    'label' => 'Informații adiționale',
     'tabs' => 'all',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -64,11 +69,14 @@ $guide
   ->setInstructions('Orice alte infomații ajutătoare sub formă de text.');
 
 $guide
-  ->addOembed('Video ajutător')
+  ->addOembed('video', [
+    'label' => 'Video ajutător'
+  ])
   ->setInstructions('Dacă doriți să includeți tutoriale video, puteți face asta aici. E suficient să introduceți un link de YouTube sau Vimeo către video-ul care trebuie afișat.');
 
 $guide
-  ->addFile('Ghid PDF', [
+  ->addFile('pdf', [
+    'label' => 'Ghid PDF',
     'return_format' => 'array',
     'library' => 'all',
     'min_size' => '',
@@ -78,7 +86,8 @@ $guide
   ->setInstructions('Ghidul complet în format PDF, pentru download.');
 
 $guide
-  ->addImage('Pictogramă eveniment', [
+  ->addImage('icon', [
+    'label' => 'Pictogramă eveniment',
     'return_format' => 'array',
     'preview_size' => 'thumbnail',
     'library' => 'all',
@@ -89,7 +98,8 @@ $guide
 
 
 $guide
-  ->addRelationship('Ghiduri similare', [
+  ->addRelationship('related', [
+    'label' => 'Ghiduri similare',
     'post_type' => array(
       0 => Constants::POST_TYPE_GUIDE,
     ),
@@ -103,7 +113,8 @@ $guide
   ->setInstructions('Dacă doriți, puteți alege ce alte ghiduri să fie afișate mai proeminent împreună cu ghidul acesta.');
 
 $guide
-  ->addColorPicker('Culoare ghid', [
+  ->addColorPicker('color', [
+    'label' => 'Culoare ghid',
     'default_value' => '#000000',
   ]);
 
