@@ -1,0 +1,41 @@
+#summary-section {
+  padding: 40px 0;
+  background: #465d86;
+  color: #fff;
+  background-image: url(../images/blue_band.png);
+  height: 270px;
+  display: flex;
+  align-items: center;
+}
+
+#summary-section .col {
+  text-align: center;
+}
+
+#summary-section .count {
+  font-size: 16px;
+}
+
+#summary-section .count span {
+  display: block;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+
+#summary-section a {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+#summary-section a:hover {
+  text-decoration: none;
+  color: #fc0;
+}
+
+#summary-section a .icon {
+  font-size: 44px;
+}
