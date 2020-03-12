@@ -36,7 +36,16 @@
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "5.3.2",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-plugin/advanced-custom-fields": "5.6.7",
+    "wpackagist-plugin/simple-custom-post-order": "2.4.9",
+    "wpackagist-plugin/simple-page-ordering": "2.3.2",
+    "wpackagist-plugin/wp-search-with-algolia": "1.2.0",
+    "wpackagist-plugin/cmb2": "2.7.0",
+    "wpackagist-plugin/pirate-forms": "2.5.2",
+    "wpackagist-plugin/wp-accessibility": "1.7.0",
+    "wpackagist-plugin/wordpress-importer": "0.7",
+    "wpackagist-plugin/wp-cerber": "8.5.9"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",
@@ -50,7 +59,16 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "wpackagist-plugin/advanced-custom-fields",
+        "wpackagist-plugin/simple-custom-post-order",
+        "wpackagist-plugin/simple-page-ordering",
+        "wpackagist-plugin/wp-search-with-algolia",
+        "wpackagist-plugin/cmb2",
+        "wpackagist-plugin/pirate-forms",
+        "wpackagist-plugin/wordpress-importer"
+      ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
