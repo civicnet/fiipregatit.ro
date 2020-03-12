@@ -1,5 +1,6 @@
 // import external dependencies
 import 'jquery';
+// import 'instantsearch.js';
 
 // Import everything from autoload
 import './autoload/**/*'

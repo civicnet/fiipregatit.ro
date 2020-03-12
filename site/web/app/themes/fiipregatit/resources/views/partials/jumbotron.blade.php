@@ -6,7 +6,7 @@
           <h3>pentru</h3>
           <h1 class="subtitle">situații de urgență</h1>
         <div class="align-self-center">
-          {!! get_search_form(false) !!}
+          @include('partials.search-form')
         </div>
       </div>
     </div>
