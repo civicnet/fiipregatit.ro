@@ -1,7 +1,218 @@
-.banner .nav li {
-  @extend .nav-item;
+.navbar {
+  background: #933;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  min-height: 100px;
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.navbar-brand {
+  color: #ffc !important;
+  font-family: Merriweather, serif;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+}
+
+.navbar-brand div.brand-container {
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.navbar-brand div.subtitle {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+  white-space: normal;
+}
+
+button.navbar-toggler {
+  background: #933;
+  border-color: #ffc !important;
+  vertical-align: middle;
+}
+
+button.navbar-toggler:focus {
+  outline: none;
+}
+
+button.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 204, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  position: unset;
+  right: unset;
+  bottom: unset;
+}
+
+.navbar .menu-item a {
+  color: #ffc;
+  margin-right: 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar .social-menu li a {
+  color: #f99;
+}
+
+.navbar-collapse ul li a:hover,
+.navbar-collapse ul li.current_page_item a {
+  color: #fff;
+}
+
+.navbar .menu-item:last-child a {
+  margin-right: 15px;
+}
+
+.navbar .social-menu li a:hover {
+  color: #fff;
+  border: none;
+}
+
+.navbar-collapse ul li a::after {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  top: 38px;
+  width: 100%;
+  content: " ";
+  display: block;
+  border-bottom: 5px solid #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.navbar .social-menu li a::after {
+  display: none;
+}
+
+.navbar-collapse ul li a:hover::after,
+.navbar-collapse ul li.current_page_item a::after {
+  transform: scaleX(1);
+}
+
+.navbar-collapse ul li.homepage_item a::after,
+.navbar-collapse ul li.homepage_item a:hover::after {
+  transform: scaleX(0);
+}
+
+.navbar-collapse ul li.homepage_item a:hover {
+  color: #fff;
+  border-bottom: 0;
+}
+
+.navbar-collapse.show ul li a:hover,
+.navbar-collapse.collapsing ul li a:hover,
+.navbar-collapse.show ul li.current_page_item a,
+.navbar-collapse.collapsing ul li.current_page_item a {
+  padding-bottom: unset;
+  border-bottom: unset;
+}
+
+.navbar .social-menu {
+  list-style-type: none;
+  position: absolute;
+  top: -35px;
+  right: 15px;
+}
+
+.navbar-collapse.show .social-menu,
+.navbar-collapse.collapsing .social-menu {
+  position: static;
+  top: unset;
+  right: unset;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.navbar .social-menu li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.navbar .social-menu li.first {
+  margin-left: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .navbar .menu-item a {
+    font-size: 1.5rem !important;
+    color: #f9aaaa;
+    letter-spacing: unset;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0 !important;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .navbar-toggler {
+    margin-top: 25px;
+    margin-right: 5px;
+  }
+
+  .navbar .menu-item:last-child a {
+    margin-right: 0;
+  }
+
+  .menu-item:first-child {
+    margin-top: 15px;
+  }
+
+  .navbar-collapse ul li a::after {
+    display: none;
+  }
+
+  .navbar-collapse ul li a:hover::after,
+  .navbar-collapse ul li.current_page_item a::after {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .navbar-brand {
+    max-width: 220px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-collapse.collapsing .social-menu,
+  .navbar-collapse.show .social-menu {
+    list-style-type: none;
+    position: absolute;
+    top: -35px;
+    right: 15px;
+    margin-top: 0;
+  }
+
+  .navbar-collapse.show {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
 }
