@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use App\Config\Constants;
 
 class App extends Controller
 {
@@ -30,4 +31,23 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+  public static function links(): array {
+    $links = get_posts(array(
+      'post_type' => Constants::POST_TYPE_LINK,
+      'posts_per_page' => 100,
+    ));
+
+    $ret = array();
+    foreach ($links as $link) {
+      $ret[] = [
+        'target' => get_field('target', $link->ID),
+        // TODO: Change with post_title
+        'title' => get_field('title', $link->ID),
+      ];
+    }
+
+    return $ret;
+  }
+
 }

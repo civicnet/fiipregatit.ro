@@ -1,0 +1,195 @@
+footer {
+  background: #333;
+  color: #bbb;
+  font-size: 14px;
+}
+
+footer a {
+  color: #bbb;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .content-info {
+  padding: 30px;
+  padding-bottom: 0;
+  padding-top: 50px;
+}
+
+footer .content-info .col {
+  flex-basis: unset;
+  margin-bottom: 30px;
+}
+
+footer .content-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .content-info ul li {
+  margin-bottom: 5px;
+}
+
+footer .content-info .header {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+footer .bottom ul li {
+  display: inline-block;
+}
+
+footer .logos-row .contribute svg {
+  //margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer .content-info .social-media li {
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+footer .content-info .social-media li svg {
+  margin-right: 10px;
+}
+
+footer .bottom {
+  padding: 20px;
+  background: #4c4c4c;
+  border-top: 1px solid #666;
+  position: relative;
+  padding-bottom: 0;
+}
+
+footer .bottom::before {
+  content: " ";
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer .bottom ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+footer .bottom img {
+  height: 80px;
+}
+
+footer .civicnet img {
+  width: 150px;
+  //height: 45px;
+  height: unset;
+  margin-top: 10px;
+  display: block;
+}
+
+footer .bottom ul li.sq-logo {
+  padding-right: 15px;
+  width: 100px;
+}
+
+footer .bottom ul li.sq-logo img {
+  margin: 0 auto;
+  display: block;
+}
+
+footer .bottom ul li.gov::after {
+  content: " ";
+  border-right: 1px solid #666;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 25%;
+}
+
+footer .bottom .copyright h4 {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer .bottom .copyright a {
+  font-weight: bold;
+}
+
+footer .bottom .copyright {
+  font-size: 11px;
+  margin: 0 auto;
+}
+
+@include media-breakpoint-up(lg) {
+  footer .logos-row .logo-box .copyright {
+    max-width: 200px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  footer .logos-row .civictech img {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+  }
+
+  footer .logos-row .contribute {
+    text-align: center;
+    display: block;
+  }
+
+  footer .logos-row {
+    padding-bottom: 12px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  footer .logos-row .civictech img {
+    margin: unset;
+    display: unset;
+  }
+
+  footer .logos-row .contribute {
+    text-align: unset;
+  }
+
+  footer .content-info {
+    text-align: center;
+  }
+
+  footer .content-info a.header {
+    margin-bottom: 0;
+  }
+
+  footer .content-info .header {
+    font-size: 1.1em;
+  }
+
+  footer .content-info .mobile-block-link {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.1em;
+  }
+
+  footer .content-info .social-media-mobile-block {
+    text-align: left;
+    width: 110px;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 1.1em;
+  }
+
+  footer .footer-address {
+    font-size: 1.1em;
+  }
+}
