@@ -25,7 +25,8 @@ $campaign
 
 
 $campaign
-  ->addWysiwyg('Conținut', [
+  ->addWysiwyg('content', [
+    'label' => 'Conținut',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'media_upload' => 1,
@@ -34,14 +35,16 @@ $campaign
   ->setRequired();
 
 $campaign
-  ->addTextarea('Extras', [
+  ->addTextarea('extras', [
+    'label' => 'Extras',
     'maxlength' => 256,
   ])
   ->setRequired()
   ->setInstructions('Acest extras de text va apărea pe homepage, dar și în rezultatele motoarelor de căutare.');
 
 $campaign
-  ->addImage('Imagine', [
+  ->addImage('image', [
+    'label' => 'Imagine',
     'return_format' => 'array',
     'preview_size' => 'large',
     'library' => 'all',
@@ -57,7 +60,8 @@ $campaign
   ->setInstructions('Această imagine va fi afișată atât pe homepage, împreună cu extrasul, cât și pe pagina de campanie.');
 
 $campaign
-  ->addRelationship('Ghiduri sugerate', [
+  ->addRelationship('related', [
+    'label' => 'Ghiduri sugerate',
     'post_type' => array(
       0 => Constants::POST_TYPE_GUIDE,
     ),

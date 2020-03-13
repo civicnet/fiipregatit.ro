@@ -1,0 +1,46 @@
+#campaign-section {
+  padding-top: 150px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#campaign-section .campaign-photo {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-color: #333;
+}
+
+#campaign-section .campaign-box {
+  margin-bottom: 80px;
+  flex-basis: unset;
+}
+
+#campaign-section .campaign-content a.title {
+  color: unset;
+}
+
+#campaign-section .campaign-content a.title:hover {
+  text-decoration: unset;
+  color: unset;
+}
+
+#campaign-section .campaign-content h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#campaign-section .campaign-content .campaign-extras {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  text-align: left;
+}
+
+#campaign-section .campaign-content .campaign-date {
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  text-align: left;
+}
