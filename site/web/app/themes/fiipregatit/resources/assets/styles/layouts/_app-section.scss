@@ -1,0 +1,39 @@
+#app-section {
+  padding-bottom: 150px;
+  background: #fff;
+  padding-top: 150px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#app-section h2 {
+  font-weight: normal;
+  text-align: left;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+#app-section h2::after {
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+#app-section .subtitle {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#app-section .app-intro .row {
+  padding-left: 15px;
+}
+
+#app-section .app-intro img {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+#app-section .app-intro .col {
+  max-width: 210px;
+  padding: 0;
+  padding-right: 15px;
+}
