@@ -30,7 +30,7 @@ class Ghiduri extends Controller {
       'color' => get_field('color', $guide->ID),
       'id' => $guide->ID,
       'is_svg' => $icon['mime_type'] === 'image/svg+xml',
-      'count_videos' => get_field('video', $guide->ID),
+      'count_videos' => get_field('video', $guide->ID) ? 1 : 0,
       'count_photos' => 0,
     ];
   }
