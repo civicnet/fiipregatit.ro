@@ -1,0 +1,38 @@
+#contact-section #map {
+  width: 100%;
+  height: 400px;
+}
+
+#contact-section .contact-info {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+#contact-section .contact-info-text {
+  margin-bottom: 50px;
+}
+
+#contact-section .contact-info-text a {
+  color: #333;
+  font-weight: bold;
+}
+
+#contact-section .contact-info-text a:hover {
+  text-decoration: none;
+}
+
+#contact-section .all-button {
+  margin-top: 20px;
+}
+
+#contact-section .pirate-forms-submit-button {
+  cursor: pointer;
+  background-color: #933;
+  border: 0;
+  font-weight: bold;
+}
+
+#contact-section .form_field_wrap {
+  min-width: 100%;
+  padding: 0;
+}
