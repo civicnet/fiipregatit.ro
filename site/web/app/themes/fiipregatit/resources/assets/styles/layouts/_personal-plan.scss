@@ -1,0 +1,131 @@
+
+#plan-personal-section {
+  background: #fff;
+  padding-top: 150px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#plan-personal-section .headline {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#plan-personal-section .big-red {
+  color: #933;
+}
+
+#plan-personal-section div:nth-of-type(3) {
+  margin-top: 10px;
+}
+
+#plan-personal-section .element::before {
+  counter-increment: element;
+  content: counter(element) ". ";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#plan-personal-section .img-container {
+  text-align: center;
+}
+
+#plan-personal-section img {
+  margin: 0 auto;
+}
+
+#plan-personal-section .trusa-row {
+  margin-bottom: 20px;
+}
+
+#plan-personal-content {
+  padding-top: 100px;
+  background: #fff;
+  padding-bottom: 100px;
+  counter-reset: plan-section;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#plan-personal-content h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+#plan-personal-content .plan-personal-image {
+  max-width: 100%;
+}
+
+#plan-personal-content .plan-personal-image-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#plan-personal-content .card {
+  border: none;
+  background: none;
+}
+
+#plan-personal-content .card-header {
+  background: none;
+  border: none;
+  padding: 3px;
+}
+
+#plan-personal-content .card-body {
+  padding-left: 0;
+}
+
+#plan-personal-content .card-header button {
+  padding-left: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  color: #933;
+}
+
+#plan-personal-content .card-header button::before {
+  counter-increment: plan-section;
+  content: counter(plan-section) ". ";
+}
+
+#plan-personal-content .download-tabel .pdf-icon {
+  color: #d03233;
+  margin-right: 15px;
+  transform: translate(10px, 10px);
+  font-size: 36px;
+}
+
+#plan-personal-content #accordion .card-header svg {
+  transition: 0.3s transform ease-in-out;
+  float: right;
+  margin-left: 10px;
+  transform: rotate(180deg);
+}
+
+#plan-personal-content #accordion .card-header .collapsed svg {
+  transform: rotate(0deg);
+}
+
+#plan-personal-content .plan-personal-row {
+  margin-top: 80px;
+}
+
+#plan-personal-content .download-tabel {
+  margin-top: 50px;
+  padding-top: 35px;
+  border-top: 1px dotted #333;
+}
+
+#plan-personal-content .download-tabel a {
+  color: #333;
+  text-transform: uppercase;
+}
+
+#plan-personal-content .download-tabel a:hover {
+  color: #d03233;
+  text-decoration: none;
+}

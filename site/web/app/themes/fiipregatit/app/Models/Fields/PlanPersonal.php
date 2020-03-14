@@ -25,10 +25,11 @@ $plan = new FieldsBuilder(Constants::PAGE_PERSONAL_PLAN, [
 ]);
 
 $plan
-  ->setLocation('page_template', '==', 'views/template-personal-plan.blade.php');
+  ->setLocation('page_template', '==', 'views/template-plan-personal.blade.php');
 
 $plan
-  ->addWysiwyg('Apă', [
+  ->addWysiwyg('water', [
+    'label' => 'Apă',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -37,7 +38,8 @@ $plan
   ->setInstructions('Detalii despre cantitatea de apă necesară, ș.a.m.d.');
 
 $plan
-  ->addWysiwyg('Alimente', [
+  ->addWysiwyg('food', [
+    'label' => 'Alimente',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -46,7 +48,8 @@ $plan
   ->setInstructions('Detalii despre alimentele necesare supraviețuirii');
 
 $plan
-  ->addWysiwyg('Îmbrăcăminte / încălțăminte', [
+  ->addWysiwyg('clothing', [
+    'label' => 'Îmbrăcăminte / încălțăminte',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -55,7 +58,8 @@ $plan
   ->setInstructions('Detalii despre ce articole de îmbrăcăminte sunt necesare supraviețuirii');
 
 $plan
-  ->addWysiwyg('Un sac de dormit', [
+  ->addWysiwyg('sleeping_bag', [
+    'label' => 'Un sac de dormit',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -64,7 +68,8 @@ $plan
   ->setInstructions('Detalii despre importanța sacului de dormit în condiții de supraviețuire');
 
 $plan
-  ->addWysiwyg('Trusă de prim ajutor', [
+  ->addWysiwyg('first_aid_kit', [
+    'label' => 'Trusă de prim ajutor',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -73,7 +78,8 @@ $plan
   ->setInstructions('Ce ar trebui să conțină trusa de prim ajutor?');
 
 $plan
-  ->addWysiwyg('Articole pentru copii', [
+  ->addWysiwyg('kid_items', [
+    'label' => 'Articole pentru copii',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -81,7 +87,8 @@ $plan
   ->setRequired();
 
 $plan
-  ->addWysiwyg('Aparate utile', [
+  ->addWysiwyg('devices', [
+    'label' => 'Aparate utile',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -90,7 +97,8 @@ $plan
   ->setInstructions('Ce alte aparate sunt utile supraviețuirii (lanternă, telefon, etc.)');
 
 $plan
-  ->addWysiwyg('Articole de igienă', [
+  ->addWysiwyg('hygiene', [
+    'label' => 'Articole de igienă',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -99,7 +107,8 @@ $plan
   ->setInstructions('Importanța articolelor de igienă pentru supraviețuire. Ce articole de igienă sunt necesare?');
 
 $plan
-  ->addWysiwyg('Acte personale', [
+  ->addWysiwyg('documents', [
+    'label' => 'Acte personale',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -108,7 +117,8 @@ $plan
   ->setInstructions('Ce acte personale sunt necesare/utile supraviețuirii?');
 
 $plan
-  ->addWysiwyg('Descriere rucsac de supraviețuire', [
+  ->addWysiwyg('kit_description', [
+    'label' => 'Descriere rucsac de supraviețuire',
     'tabs' => 'visual',
     'toolbar' => 'basic',
     'delay' => 'true'
@@ -117,16 +127,18 @@ $plan
   ->setInstructions('Ce este rucsacul de supraviețuire?');
 
 $plan
-  ->addWysiwyg('Descriere tabel informații utile', [
-    'tabs' => 'visual',
-    'toolbar' => 'basic',
+  ->addWysiwyg('table_description', [
+    'label' => 'Descriere tabel informații utile',
+    // 'tabs' => 'visual',
+    'toolbar' => 'full',
     'delay' => 'true'
   ])
   ->setRequired()
   ->setInstructions('Ce informații utile sunt cuprinse în acest tabel?');
 
 $plan
-  ->addFile('Tabel PDF', [
+  ->addFile('pdf_table', [
+    'label' => 'Tabel PDF',
     'return_format' => 'array',
     'library' => 'all',
     'min_size' => '',

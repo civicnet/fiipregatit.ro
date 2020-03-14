@@ -26,7 +26,7 @@ $about = new FieldsBuilder(Constants::PAGE_ABOUT, [
 ]);
 
 $about
-  ->setLocation('page_template', '==', 'views/page-despre.blade.php');
+  ->setLocation('page_template', '==', 'views/template-despre.blade.php');
 
 $about
   ->addWysiwyg('about', [
