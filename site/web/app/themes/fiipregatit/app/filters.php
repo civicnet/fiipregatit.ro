@@ -107,3 +107,8 @@ add_filter('wp_nav_menu_items', function($items, $args) {
 	}
 	return $items;
 }, 10, 2);
+
+add_filter('upload_mimes', function ($mime_types = array()) {
+  $mime_types['svg']  = 'image/svg+xml';
+  return $mime_types;
+});
