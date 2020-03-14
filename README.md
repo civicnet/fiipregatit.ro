@@ -1,5 +1,7 @@
 # [fiipregătit.ro](https://fiipregatit.ro)
-Platforma Națională de Pregătire pentru Situații de Urgență
+<img src="screenshot.png" />
+
+## Platforma Națională de Pregătire pentru Situații de Urgență
 
 Soluția propusă a fost dezvoltată în strânsă colaborare cu specialiștii DSU și cuprinde următoarele funcționalități:
 
