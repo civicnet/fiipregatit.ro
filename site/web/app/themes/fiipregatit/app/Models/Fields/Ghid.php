@@ -109,7 +109,6 @@ $guide
     'return_format' => 'object',
     'ui' => 1,
   ])
-  ->setRequired()
   ->setInstructions('Dacă doriți, puteți alege ce alte ghiduri să fie afișate mai proeminent împreună cu ghidul acesta.');
 
 $guide
