@@ -1,5 +1,5 @@
 {{--
-  Template Name: Plan Personal
+  Template Name: Ghiduri
 --}}
 
 @extends('layouts.app')
@@ -8,9 +8,10 @@
   @include('partials.jumbotron',
   ['show_header' => false])
 
-  @include('partials.content-plan-personal',
-  ['plan' => PlanPersonal::sections()])
+  @include('partials.guide-section', [
+    'show_count' => 100,
+    'show_button' => false,
+  ])
 
-  @include('partials.campaign-section')
   @include('partials.app-promo')
 @endsection
