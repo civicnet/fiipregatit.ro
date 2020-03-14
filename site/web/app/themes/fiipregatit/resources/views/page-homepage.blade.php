@@ -2,7 +2,8 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.jumbotron')
+  @include('partials.jumbotron',
+  ['show_header' => true])
   @include('partials.guide-section')
   @include('partials.homepage-counter',
   ['guide_count' => 1, 'video_count' => 2, 'image_count' => 3])

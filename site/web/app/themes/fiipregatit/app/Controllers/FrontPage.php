@@ -59,5 +59,4 @@ class FrontPage extends Controller {
       'date' => $campaign->post_date,
     ];
   }
-
 }
