@@ -67,19 +67,19 @@
         <ul class="social-media-mobile-block">
           <li>
             <a href="https://www.facebook.com/departamenturgente"  rel="nofollow" target="_blank">
-              <i class="fab fa-facebook-square" data-fa-transform="grow-10"></i>
+              <i class="fab fa-facebook-square"></i>
               Facebook
             </a>
           </li>
           <li>
             <a href="https://twitter.com/dsuromania"  rel="nofollow" target="_blank">
-              <i class="fab fa-twitter-square" data-fa-transform="grow-10"></i>
+              <i class="fab fa-twitter-square"></i>
               Twitter
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/channel/UC5qTBf9rEFj2UdxNEQOzlxA"  rel="nofollow" target="_blank">
-              <i class="fab fa-youtube-square" data-fa-transform="grow-10"></i>
+              <i class="fab fa-youtube-square"></i>
               YouTube
             </a>
           </li>

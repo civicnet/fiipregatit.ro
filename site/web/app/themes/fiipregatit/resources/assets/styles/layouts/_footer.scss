@@ -134,6 +134,11 @@ footer .logos-row .logo-box .fas:hover {
   cursor: pointer;
 }
 
+footer .social-media .fab {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
 @include media-breakpoint-up(lg) {
   footer .logos-row .logo-box .copyright {
     max-width: 200px;
