@@ -55,7 +55,7 @@ class PlanPersonal extends Controller {
           'content' => get_field('devices', $page->ID),
           'collapsed' => true,
         ], [
-          'index' => 6,
+          'index' => 7,
           'title' => 'Articole pentru copii',
           'content' => get_field('kid_items', $page->ID),
           'collapsed' => true,
