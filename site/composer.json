@@ -45,7 +45,10 @@
     "wpackagist-plugin/pirate-forms": "2.5.2",
     "wpackagist-plugin/wp-accessibility": "1.7.0",
     "wpackagist-plugin/wordpress-importer": "0.7",
-    "wpackagist-plugin/wp-cerber": "8.5.9"
+    "wpackagist-plugin/wp-cerber": "8.5.9",
+    "wpackagist-plugin/updraftplus": "1.16.22",
+    "wpackagist-plugin/wordpress-seo": "13.2",
+    "wpackagist-plugin/wp-smushit": "3.6.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",
