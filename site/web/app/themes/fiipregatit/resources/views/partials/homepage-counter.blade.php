@@ -5,7 +5,7 @@
         <a href="/ghiduri">
           <i class="far fa-file-alt icon"></i>
           <div class="count">
-            <span>{{ $guide_count || 0 }}</span> ghiduri educative
+            <span>{{ $guide_count }}</span> ghiduri educative
           </div>
         </a>
       </div>
@@ -13,7 +13,7 @@
         <a href="/galerie-foto">
           <i class="far fa-image icon"></i>
           <div class="count">
-            <span>{{ $image_count || 0 }}</span> imagini si ilustrații
+            <span>{{ $image_count }}</span> imagini si ilustrații
           </div>
         </a>
       </div>
@@ -21,7 +21,7 @@
         <a href="/galerie-video">
           <i class="fa fa-film icon"></i>
           <div class="count">
-            <span>{{ $video_count || 0 }}</span> video instrucțiuni
+            <span>{{ $video_count }}</span> video instrucțiuni
           </div>
         </a>
       </div>

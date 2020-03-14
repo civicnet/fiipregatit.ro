@@ -10,11 +10,7 @@
     'show_button' => true,
   ])
 
-  @include('partials.homepage-counter', [
-    'guide_count' => 1,
-    'video_count' => 2,
-    'image_count' => 3,
-  ])
+  @include('partials.homepage-counter', FrontPage::counters())
 
   @include('partials.survival-kit')
 
