@@ -9,7 +9,7 @@
 
     @if ($guide['count_photos'])
       <div class="guide-count count-foto">
-        <i class="far fa-image"></i> {{ $guide['count_photo'] }} foto
+        <i class="far fa-image"></i> {{ $guide['count_photos'] }} foto
       </div>
     @endif
 

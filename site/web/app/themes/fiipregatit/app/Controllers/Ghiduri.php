@@ -22,6 +22,10 @@ class Ghiduri extends Controller {
 
   public static function guideData(\WP_Post $guide): array {
     $icon = get_field('icon', $guide->ID);
+    $images = array_filter(
+      (array) get_post_meta($guide->ID, Constants::GUIDE_METABOX_GALLERY, 1)
+    );
+
     return [
       'icon' => $icon,
       // TODO: Replace with `post_title`, no need for custom field
@@ -31,7 +35,7 @@ class Ghiduri extends Controller {
       'id' => $guide->ID,
       'is_svg' => $icon['mime_type'] === 'image/svg+xml',
       'count_videos' => get_field('video', $guide->ID) ? 1 : 0,
-      'count_photos' => 0,
+      'count_photos' => count($images),
     ];
   }
 }

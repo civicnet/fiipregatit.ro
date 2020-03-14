@@ -194,7 +194,7 @@ add_action('init', function () {
 add_action('cmb2_admin_init', function () {
   // Custom Guides meta box
   $cmb_guide = new_cmb2_box(array(
-    'id'            => 'galerie_foto_ghiduri',
+    'id'            => 'attachments_guide',
     'title'         => __('Galerie Foto', 'cmb2'),
     'object_types'  => array(Config\Constants::POST_TYPE_GUIDE),
     'context'       => 'side',
