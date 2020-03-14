@@ -89,3 +89,21 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter('wp_nav_menu_items', function($items, $args) {
+	if ($args->theme_location === 'primary_navigation') {
+        $get_attrs = function() {
+            return is_front_page()
+                ? 'is-homepage'
+                : '';
+        };
+
+        $home = '<li class="menu-item homepage_item '. $get_attrs() .'">
+			<a href="' . esc_url(get_home_url()) . '"
+               title="'.esc_attr(get_bloginfo('name', 'display')).'">
+               <i class="fas fa-home"></i>
+			</a></li>';
+		$items = $home . $items;
+	}
+	return $items;
+}, 10, 2);
