@@ -24,7 +24,7 @@ class Campanii extends Controller {
     return [
       'image' => get_field('image',  $campaign->ID),
       // TODO: Replace with `post_title`, no need for custom field
-      'title' => get_field('name',  $campaign->ID),
+      'title' => $campaign->post_title,
       'permalink' => get_permalink($campaign->ID),
       'extras' => get_field('extras', $campaign->ID),
       'date' => $campaign->post_date,
