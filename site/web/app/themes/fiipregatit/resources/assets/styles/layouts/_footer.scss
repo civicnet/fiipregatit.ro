@@ -129,6 +129,11 @@ footer .bottom .copyright {
   margin: 0 auto;
 }
 
+footer .logos-row .logo-box .fas:hover {
+  color: #f00;
+  cursor: pointer;
+}
+
 @include media-breakpoint-up(lg) {
   footer .logos-row .logo-box .copyright {
     max-width: 200px;

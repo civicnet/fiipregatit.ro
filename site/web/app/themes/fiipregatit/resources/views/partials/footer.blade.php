@@ -120,14 +120,28 @@
           </ul>
         </a>
       </div>
-      <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 logo-box">
-        <a href="https://civicnet.ro/" class="civicnet" target="_blank">
-          <img src="@asset('images/CivicNetLogoNegative.svg')" alt="Logo CivicNet"/>
-        </a>
-        <a class="contribute" href="https://github.com/civicnet/fiipregatit.ro" target="_blank"  rel="nofollow">
-          <i class="fab fa-github"></i> Contribuie și tu!
-        </a>
-      </div>
+      <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 logo-box" style="">
+          <span
+            class="coffee"
+            style="text-transform: capitalise; font-size: 12px; width: 150px; margin: 0 auto; display: block">
+            Creat cu
+            <i class="fas fa-heart" style="margin: 0 4px"></i>
+            si
+            <i class="fas fa-coffee" style="margin: 0 4px"></i>
+            de
+          </span>
+          <a href="https://civicnet.ro/" class="civicnet" target="_blank">
+            <img src="@asset('images/CivicNetLogoNegative.svg')" alt="Logo CivicNet" style="margin: 0 auto" />
+          </a>
+          <a
+            href="https://github.com/civicnet/fiipregatit.ro"
+            target="_blank"
+            class="contribute"
+            style="text-transform: capitalise; font-size: 12px; width: 150px; margin: 0 auto; display: block">
+            <i class="fab fa-github"></i>
+            Contribuie si tu
+          </a>
+        </div>
     </div>
   </div>
 </footer>
