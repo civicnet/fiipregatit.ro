@@ -1,9 +1,10 @@
 <div
   class="container-fluid"
-  id="ghiduri-section">
+  id="ghiduri-section"
+  style="@if (isset($bg)) background: {{ $bg }} @endif">
   <div class="container">
     <h2>
-        Ghiduri
+        @if (isset($title)) {{ $title }} @else Ghiduri @endif
     </h2>
     <div class="row ghid-row justify-content-center">
       @foreach (Ghiduri::get($show_count) as $guide)

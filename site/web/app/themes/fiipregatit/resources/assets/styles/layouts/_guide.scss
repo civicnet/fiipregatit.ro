@@ -1,0 +1,246 @@
+#guide-content {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#guide-content .small-menu,
+#despre-content .small-menu {
+  text-align: center;
+  top: -40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: Merriweather, serif;
+}
+
+#guide-content .small-menu .btn,
+#despre-content .small-menu .btn {
+  background: none;
+  border: 1px solid #933;
+  border-radius: 0;
+  color: #933;
+}
+
+#guide-content .small-menu .dropdown-item,
+#despre-content .small-menu .dropdown-item {
+  text-transform: capitalize;
+}
+
+#guide-content #accordion .collapse {
+  font-family: "Roboto", sans-serif;
+}
+
+#guide-content #accordion .card-header .btn-link {
+  white-space: normal;
+  padding-right: 45px;
+  position: relative;
+}
+
+#guide-content ul li a svg {
+  margin-right: 5px;
+}
+
+#guide-content .download-guide svg {
+  color: #d03233;
+  margin-right: 15px;
+}
+
+#guide-content #accordion .card-header svg {
+  transition: 0.3s transform ease-in-out;
+  float: right;
+  transform: rotate(180deg);
+}
+
+#guide-content #accordion .card-header .btn-link i {
+  height: 18px;
+  right: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#guide-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#guide-content #accordion ul {
+  list-style: none;
+  counter-reset: section;
+  position: relative;
+}
+
+#guide-content ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#guide-content #accordion ul li {
+  padding-bottom: 12px;
+  padding-left: 40px;
+  position: relative;
+}
+
+#guide-content #accordion ul li::before {
+  line-height: 24px;
+  width: 27px;
+  left: 0;
+  position: absolute;
+  counter-increment: section;
+  content: counter(section);
+  border-radius: 50%;
+  background: #d03233;
+  color: #fff;
+  font-weight: 700;
+  height: 27px;
+  text-align: center;
+  border: 2px solid #fff;
+  z-index: 2;
+}
+
+#guide-content #accordion ul li::after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid;
+  left: 13.5px;
+  bottom: 0;
+  top: 20px;
+  height: 100%;
+}
+
+#guide-content #accordion ul li:last-child::after {
+  content: none;
+}
+
+#guide-content #accordion ul li:last-child {
+  padding-bottom: 0;
+}
+
+#guide-content #accordion .card-header {
+  padding: 0;
+  background: none;
+  border-bottom: none;
+}
+
+#guide-content #accordion .card-header button {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  color: #d03233;
+  padding: 1.5rem 1.25rem;
+  text-transform: lowercase;
+  text-decoration: none;
+  transition: 0.7s transform fade-in;
+  background: none;
+  border-bottom: none;
+}
+
+#guide-content #accordion .card-header button::first-letter {
+  text-transform: uppercase;
+}
+
+#guide-content #accordion .card-header button:hover {
+  text-decoration: none;
+}
+
+#guide-content #accordion .card-header .collapsed i {
+  transform: rotate(0deg);
+}
+
+#guide-content #accordion .card-header button.collapsed {
+  background: rgba(0, 0, 0, 0.03);
+  color: #333;
+}
+
+#guide-content #accordion .card {
+  border: 1px solid #999;
+  border-radius: 0;
+}
+
+#guide-content #accordion .carousel-item {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 375px;
+}
+
+#guide-content ul li a {
+  color: #333;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+#guide-content .download-guide a {
+  color: #333;
+  text-transform: uppercase;
+}
+
+#guide-content ul li a:hover {
+  color: #d03233;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+#guide-content .download-guide a:hover {
+  color: #d03233;
+  text-decoration: none;
+}
+
+#guide-content #accordion .carousel-item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#guide-content .guide-sidebar {
+  padding-left: 50px;
+}
+
+#guide-content h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #999;
+  display: inline-block;
+}
+
+#guide-content h2 {
+  margin-bottom: 30px;
+}
+
+#guide-content .download-guide {
+  margin-top: 50px;
+  padding-left: 35px;
+}
+
+#guide-content .extra-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin: 30px auto;
+}
+
+#guide-content .extra-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#guide-content .small-menu .btn {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+#guide-content .small-menu .dropdown-item {
+  font-size: 1.2rem;
+  padding: 10px;
+}
