@@ -125,6 +125,59 @@
                   </div>
                   @endif
 
+                  <div
+                    id="carouselControls"
+                    class="carousel slide"
+                    data-ride="carousel"
+                    data-interval="false">
+
+                    @if ($guide['photo_gallery_is_single'])
+                      <ol class="carousel-indicators">
+                        @foreach ($guide['photo_gallery'] as $idx => $photo)
+                          <li
+                            data-target="#carouselIndicators"
+                            data-slide-to="{{ $idx }}"
+                            class="@if ($loop->first) active @endif">
+                          </li>
+                        @endforeach
+                      </ol>
+                    @endif
+
+                    <div class="carousel-inner">
+                      @foreach ($guide['photo_gallery'] as $attachment)
+                        <div
+                          class="carousel-item @if ($loop->first) active @endif"
+                          style="background-image: url({{ $attachment }})">
+                          <a
+                            href="{{ $attachment }}"
+                            data-toggle="lightbox"
+                            data-title="Ghid {{ $guide['title'] }}"
+                            data-gallery="guide-gallery"
+                            class="lightbox">
+                          </a>
+                        </div>
+                      @endforeach
+                    </div>
+
+                    @if (!$guide['photo_gallery_is_single'])
+                      <a
+                        class="carousel-control-prev"
+                        href="#carouselControls"
+                        role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Înapoi</span>
+                      </a>
+                      <a
+                        class="carousel-control-next"
+                        href="#carouselControls"
+                        role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Înainte</span>
+                      </a>
+                    @endif
+                  </div>
                 </div>
               </div>
             </div>

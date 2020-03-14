@@ -17,6 +17,10 @@ class Ghid extends Controller {
       ];
     }, Ghiduri::get(100));
 
+    $gallery = array_filter(
+      (array) get_post_meta($guide->ID, Constants::GUIDE_METABOX_GALLERY, 1)
+    );
+
     return [
       'title' => get_field('name', $guide->ID),
       'before_content' => get_field('before', $guide->ID),
@@ -33,8 +37,8 @@ class Ghid extends Controller {
         && !get_field('during', $guide->ID),
       'extra_info' => get_field('info', $guide->ID),
       'video' => get_field('video', $guide->ID),
-      'photo_gallery' => null, // $gallery,
-      'photo_gallery_is_single' => false, // count($gallery) === 1,
+      'photo_gallery' => $gallery,
+      'photo_gallery_is_single' => count($gallery) === 1,
       'has_extra_info' => (
         get_field('info', $guide->ID)
         || get_field('video', $guide->ID)
