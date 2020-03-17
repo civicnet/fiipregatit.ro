@@ -1,6 +1,6 @@
 <div class="container-fluid" id="plan-personal-content">
   <div class="container">
-    <h2>Trusă Supraviețuire</h2>
+    <h2>{{ get_the_title() }} </h2>
     <div class="row plan-personal-row">
       <div class="plan-personal-image-container col-md-6 col-sm-12 d-none d-md-block">
         <img src="@asset('images/fiipregatit_planpersonal_colaj_v1.png')" class="plan-personal-image" />
