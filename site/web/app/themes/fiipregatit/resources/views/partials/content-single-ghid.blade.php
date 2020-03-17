@@ -213,5 +213,6 @@
   'show_count' => 4,
   'show_button' => false,
   'title' => 'Alte Situații',
-  'bg' => '#fff'
+  'bg' => '#fff',
+  'category' => null,
 ])

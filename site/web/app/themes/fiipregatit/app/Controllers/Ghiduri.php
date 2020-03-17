@@ -6,11 +6,27 @@ use Sober\Controller\Controller;
 use App\Config\Constants;
 
 class Ghiduri extends Controller {
-  public static function get($count = 8): array {
-    $guides = get_posts(array(
+  public static function get($count = 8, $category = null): array {
+    $query = [
       'post_type' => Constants::POST_TYPE_GUIDE,
       'posts_per_page' => $count,
-    ));
+    ];
+
+    if ($category) {
+      $all_categories = get_categories('category');
+      foreach ($all_categories as $currentCategory) {
+        if ($currentCategory->slug === $category) {
+          $query['category'] = $currentCategory->term_id;
+          break;
+        }
+      }
+
+      if (!isset($query['category'])) {
+        return [];
+      }
+    }
+
+    $guides = get_posts($query);
 
     $ret = array();
     foreach ($guides as $guide) {

@@ -11,6 +11,7 @@
   @include('partials.guide-section', [
     'show_count' => 100,
     'show_button' => false,
+    'category' => null,
   ])
 
   @include('partials.app-promo')

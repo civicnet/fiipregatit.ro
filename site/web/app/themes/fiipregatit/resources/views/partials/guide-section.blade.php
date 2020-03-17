@@ -1,3 +1,4 @@
+@if (Ghiduri::get($show_count, $category))
 <div
   class="container-fluid"
   id="ghiduri-section"
@@ -7,7 +8,7 @@
         @if (isset($title)) {{ $title }} @else Ghiduri @endif
     </h2>
     <div class="row ghid-row justify-content-center">
-      @foreach (Ghiduri::get($show_count) as $guide)
+      @foreach (Ghiduri::get($show_count, $category) as $guide)
         @if ($guide)
           @include('partials/components/guide-box', [ 'guide' => $guide ])
         @endif
@@ -25,3 +26,4 @@
     </div>
   </div>
 </div>
+@endif

@@ -6,8 +6,16 @@
   ['show_header' => true])
 
   @include('partials.guide-section', [
+    'show_count' => 4,
+    'show_button' => false,
+    'title' => 'COVID-19',
+    'category' => 'covid-19',
+  ])
+
+  @include('partials.guide-section', [
     'show_count' => 8,
     'show_button' => true,
+    'category' => null,
   ])
 
   @include('partials.homepage-counter', FrontPage::counters())
