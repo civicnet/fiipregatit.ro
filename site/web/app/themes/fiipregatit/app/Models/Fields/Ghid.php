@@ -111,10 +111,4 @@ $guide
   ])
   ->setInstructions('Dacă doriți, puteți alege ce alte ghiduri să fie afișate mai proeminent împreună cu ghidul acesta.');
 
-$guide
-  ->addColorPicker('color', [
-    'label' => 'Culoare ghid',
-    'default_value' => '#000000',
-  ]);
-
 return $guide;
