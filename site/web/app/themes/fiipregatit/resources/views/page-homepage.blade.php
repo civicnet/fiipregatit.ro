@@ -7,7 +7,7 @@
 
   @include('partials.guide-section', [
     'show_count' => 4,
-    'show_button' => false,
+    'show_button' => true,
     'title' => 'COVID-19',
     'category' => 'covid-19',
   ])

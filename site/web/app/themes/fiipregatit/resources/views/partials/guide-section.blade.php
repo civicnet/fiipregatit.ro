@@ -17,7 +17,7 @@
       @if ($show_button)
         <div class="text-center">
           <a href="/ghiduri" rel="button" class="btn btn-secondary all-button">
-            Vezi toate ghidurile
+            Vezi {{ $category ? ' ghiduri ' . $category : ' toate ghidurile' }}
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </a>
         </div>
