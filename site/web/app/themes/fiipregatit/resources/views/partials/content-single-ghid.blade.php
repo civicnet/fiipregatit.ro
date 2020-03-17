@@ -212,7 +212,15 @@
 @include('partials.guide-section', [
   'show_count' => 4,
   'show_button' => false,
-  'title' => 'Alte Situații',
+  'title' => 'COVID-19',
   'bg' => '#fff',
+  'category' => 'covid-19',
+])
+
+@include('partials.guide-section', [
+  'show_count' => 4,
+  'show_button' => false,
+  'title' => 'Alte Situații',
+  'bg' => '#e4e4e4',
   'category' => null,
 ])

@@ -10,12 +10,27 @@ class Ghid extends Controller {
   public static function get(): array {
     $guide = get_post();
 
+    $guideCategories = get_the_category();
+    $currentCategory = null;
+    if (count($guideCategories)) {
+      $currentCategory = $guideCategories[0] ? $guideCategories[0]->slug : null;
+    }
+
+    $guides = Ghiduri::get(10, $currentCategory);
+    if (!count($guides) < 3) {
+      $guides = Ghiduri::get(10);
+    }
+
     $sidebarLinks = array_map(function($guide) {
       return [
         'text' => $guide['title'],
         'href' => $guide['permalink'],
       ];
-    }, Ghiduri::get(100));
+    }, $guides);
+
+    $sidebarLinks = array_filter($sidebarLinks, function($link) use ($guide) {
+      return $link['text'] !== get_field('name', $guide->ID);
+    });
 
     $gallery = array_filter(
       (array) get_post_meta($guide->ID, Constants::GUIDE_METABOX_GALLERY, 1)
