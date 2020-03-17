@@ -178,6 +178,24 @@
             </div>
           @endif
 
+          @if ($guide['is_licensed'])
+            <div class="licensed-guide">
+              <a
+                rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <img alt="Licenţa Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+              </a>
+              <p>
+                Această operă este pusă la dispoziţie sub
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    Licenţa Creative Commons Atribuire-Necomercial-Distribuire în Condiţii Identice 4.0 Internațional
+                </a>.
+              </p>
+            </div>
+          @endif
+
           @if ($guide['pdf_guide'])
             <div class="download-guide">
               <a href="{{ $guide['pdf_guide']['url'] }}" target="_blank">

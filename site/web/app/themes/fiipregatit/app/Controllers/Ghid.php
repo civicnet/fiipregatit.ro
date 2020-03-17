@@ -75,6 +75,7 @@ class Ghid extends Controller {
       'pdf_size' => FileUtils::getHumanSize(get_field('pdf', $guide->ID)['url']),
       'sidebar_links' => $sidebarLinks,
       'sections' => $sections,
+      'is_licensed' => get_field('is_licensed', $guide->ID),
     ];
   }
 }

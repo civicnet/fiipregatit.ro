@@ -33,6 +33,13 @@ $guide
   ->setInstructions('Pentru ce fel de eveniment este ghidul (ex: cutremur, viscol, etc.)');
 
 $guide
+  ->addTrueFalse('is_licensed', [
+    'label' => 'Licențiat?',
+  ])
+  ->setRequired()
+  ->setInstructions('Ghidurile licențiate vor include un link către Creative Commons - Attribution-NonCommercial-ShareAlike 4.0');
+
+$guide
   ->addWysiwyg('before', [
     'label' => 'Pregătire înaintea evenimentului',
     'tabs' => 'all',

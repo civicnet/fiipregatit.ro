@@ -176,6 +176,23 @@
   text-transform: capitalize;
 }
 
+#guide-content .licensed-guide {
+  display: flex;
+  line-height: 15px;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin-top: 12px;
+}
+
+#guide-content .licensed-guide:hover {
+  opacity: 1;
+}
+
+#guide-content .licensed-guide p {
+  line-height: 15px;
+  padding-left: 12px;
+}
+
 #guide-content .download-guide a {
   color: #333;
   text-transform: uppercase;
