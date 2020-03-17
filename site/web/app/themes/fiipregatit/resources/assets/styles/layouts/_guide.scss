@@ -181,6 +181,13 @@
   text-transform: uppercase;
 }
 
+#guide-content .download-guide .pdf-icon {
+  color: #d03233;
+  margin-right: 15px;
+  transform: translate(10px, 10px);
+  font-size: 36px;
+}
+
 #guide-content ul li a:hover {
   color: #d03233;
   text-decoration: none;

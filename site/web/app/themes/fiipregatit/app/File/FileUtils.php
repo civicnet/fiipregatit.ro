@@ -33,7 +33,7 @@ final class FileUtils {
 
     $count = intval($matches[1][0]);
     if ($count) {
-      return $count . ($count < 2 ? ' pagină' : 'pagini');
+      return $count . ($count < 2 ? ' pagină' : ' pagini');
     }
 
     stream_context_set_default(

@@ -45,7 +45,7 @@ class Ghid extends Controller {
         || false // $gallery
       ),
       'pdf_guide' =>  get_field('pdf', $guide->ID),
-      'pdf_size' => FileUtils::getHumanSize(get_field('pdf', $guide->ID)),
+      'pdf_size' => FileUtils::getHumanSize(get_field('pdf', $guide->ID)['url']),
       'sidebar_links' => $sidebarLinks,
     ];
   }

@@ -183,6 +183,18 @@
             </div>
           @endif
 
+          @if ($guide['pdf_guide'])
+            <div class="download-guide">
+              <a href="{{ $guide['pdf_guide']['url'] }}" target="_blank">
+                <i class="far fa-file-pdf pdf-icon"></i>
+                <strong>Descarcă ghidul</strong>
+                @if ($guide['pdf_size'])
+                  (PDF, {{ $guide['pdf_size'] }})
+                @endif
+              </a>
+            </div>
+          @endif
+
         </div>
       </div>
       <div class="col col-lg-3 col-md-12 guide-sidebar d-none d-lg-block">
