@@ -10,20 +10,16 @@
         </a>
       </div>
       <div class="col">
-        <a href="/galerie-foto">
-          <i class="far fa-image icon"></i>
-          <div class="count">
-            <span>{{ $image_count }}</span> imagini si ilustrații
-          </div>
-        </a>
+        <i class="far fa-image icon"></i>
+        <div class="count">
+          <span>{{ $image_count }}</span> imagini si ilustrații
+        </div>
       </div>
       <div class="col">
-        <a href="/galerie-video">
-          <i class="fa fa-film icon"></i>
-          <div class="count">
-            <span>{{ $video_count }}</span> video instrucțiuni
-          </div>
-        </a>
+        <i class="fa fa-film icon"></i>
+        <div class="count">
+          <span>{{ $video_count }}</span> video instrucțiuni
+        </div>
       </div>
     </div>
   </div>
