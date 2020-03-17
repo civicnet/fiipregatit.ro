@@ -57,7 +57,7 @@
                     data-target="#collapseTwo"
                     aria-expanded="@if ($guide['is_during_single']) true @else false @endif"
                     aria-controls="collapseTwo">
-                    Înainte de eveniment
+                    În timpul evenimentului
                     <i class="fa fa-chevron-down pull-right"></i>
                   </button>
                 </h5>
@@ -83,7 +83,7 @@
                     data-target="#collapseThree"
                     aria-expanded="@if ($guide['is_after_single']) true @else false @endif"
                     aria-controls="collapseThree">
-                    Înainte de eveniment
+                    După eveniment
                     <i class="fa fa-chevron-down pull-right"></i>
                   </button>
                 </h5>
