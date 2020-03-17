@@ -59,3 +59,19 @@
     </div>
   </div>
 </div>
+
+@include('partials.guide-section', [
+  'show_count' => 4,
+  'show_button' => false,
+  'title' => 'COVID-19',
+  'bg' => '#e4e4e4',
+  'category' => 'covid-19',
+])
+
+@include('partials.guide-section', [
+  'show_count' => 4,
+  'show_button' => false,
+  'title' => 'Alte Situații',
+  'bg' => '#fff',
+  'category' => null,
+])
