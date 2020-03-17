@@ -76,7 +76,7 @@
           @if ($guide['after_content'])
             @include('partials/components/guide-section', [
               'id' => 'AfterContent',
-              'isCollapsed' => $guide['is_after_single'],
+              'isOpen' => $guide['is_after_single'],
               'title' => 'După eveniment',
               'content' => $guide['after_content']
               // 'bg' => '#fff'
@@ -86,7 +86,7 @@
           @foreach ($guide['sections'] as $section)
             @include('partials/components/guide-section', [
               'id' => md5($section['name']),
-              'isCollapsed' => true,
+              'isOpen' => true,
               'title' => $section['name'],
               'content' => $section['content'],
               // 'bg' => '#fff'
