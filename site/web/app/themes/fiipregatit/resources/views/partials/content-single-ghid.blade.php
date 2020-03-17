@@ -86,7 +86,7 @@
           @foreach ($guide['sections'] as $section)
             @include('partials/components/guide-section', [
               'id' => md5($section['name']),
-              'isOpen' => true,
+              'isOpen' => false,
               'title' => $section['name'],
               'content' => $section['content'],
               // 'bg' => '#fff'
