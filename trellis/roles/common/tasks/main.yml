@@ -46,10 +46,10 @@
       memcached_packages_custom: "{{ memcached_packages_custom }}"
       php_extensions_default: "{{ php_extensions_default }}"
       php_extensions_custom: "{{ php_extensions_custom }}"
-      sshd_packages_default: "{{ sshd_packages_default }}"
-      sshd_packages_custom: "{{ sshd_packages_custom }}"
+      #sshd_packages_default: "{{ sshd_packages_default }}"
+      #sshd_packages_custom: "{{ sshd_packages_custom }}"
     package_vars_wrong_format: "[{% for k,v in package_vars.items() | list if v | type_debug != 'dict' %}'{{ k }}',{% endfor %}]"
-  tags: [sshd, memcached, php]
+  tags:  [memcached, php] # [sshd, memcached, php]
 
 - name: Verify dict format for apt package combined variables
   fail:
@@ -60,9 +60,9 @@
       apt_packages: "{{ apt_packages }}"
       memcached_packages: "{{ memcached_packages }}"
       php_extensions: "{{ php_extensions }}"
-      sshd_packages: "{{ sshd_packages }}"
+      # sshd_packages: "{{ sshd_packages }}"
     package_vars_wrong_format: "[{% for k,v in package_vars.items() | list if v | type_debug != 'dict' %}'{{ k }}',{% endfor %}]"
-  tags: [sshd, memcached, php]
+  tags: [memcached, php] # [sshd, memcached, php]
 
 - name: Validate Ubuntu version
   debug:
@@ -99,16 +99,16 @@
   when: openssh_6_8_plus and validate_ssh | default(true)
   tags: [sshd]
 
-- name: Validate compatible settings between SSH client and server
-  assert:
-    that:
-      - overlapping_ciphers | count
-      - overlapping_kex | count
-      - overlapping_macs | count
-      - overlapping_host_keys | count
-    msg: "{{ lookup('template', 'validate_ssh_msg.j2') }}"
-  when: openssh_6_8_plus and validate_ssh | default(true)
-  tags: [sshd]
+#- name: Validate compatible settings between SSH client and server
+#  assert:
+#    that:
+#      - overlapping_ciphers | count
+#      - overlapping_kex | count
+#      - overlapping_macs | count
+#      - overlapping_host_keys | count
+#    msg: "{{ lookup('template', 'validate_ssh_msg.j2') }}"
+#  when: openssh_6_8_plus and validate_ssh | default(true)
+#  tags: [sshd]
 
 - name: Update apt packages
   apt:
