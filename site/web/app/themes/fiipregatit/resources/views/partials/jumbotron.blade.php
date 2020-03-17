@@ -1,8 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <div id="jumbotron-alert">
-      {!! get_option( 'fiipregatit_alert_text_setting_field' ) !!}
-    </div>
+    @if (get_option( 'fiipregatit_alert_text_setting_field' ))
+      <div id="jumbotron-alert">
+        {!! get_option( 'fiipregatit_alert_text_setting_field' ) !!}
+      </div>
+    @endif
     <div class="jumbotron jumbotron-fluid {{ !$show_header ? 'small-jumbotron' : '' }} ">
       <div class="container">
         @if ($show_header)
