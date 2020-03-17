@@ -48,6 +48,7 @@ add_action('init', function () {
       'supports' => array('title', 'editor', 'thumbnail'),
       'public' => true,
       'has_archive' => false,
+      'taxonomies'  => array( 'category' ),
       'menu_icon' => 'dashicons-clipboard',
     )
   );
@@ -62,6 +63,19 @@ add_action('init', function () {
       'public' => true,
       'has_archive' => false,
       'menu_icon' => 'dashicons-external'
+    )
+  );
+
+  register_post_type(
+    Config\Constants::POST_TYPE_GUIDE_SECTION,
+    array(
+      'labels' => array(
+        'name' => __('Secțiune Ghid'),
+        'singular_name' => __('Sectiune')
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'menu_icon' => 'dashicons-align-center'
     )
   );
 });
@@ -191,7 +205,7 @@ add_action('init', function () {
 /**
  * Initialize CMB boxes
  */
-add_action('cmb2_admin_init', function () {
+add_action('cmb2_init', function () {
   // Custom Guides meta box
   $cmb_guide = new_cmb2_box(array(
     'id'            => 'attachments_guide',
@@ -338,9 +352,9 @@ add_action('cmb2_admin_init', function () {
       'id'   => 'descriere_partener',
       'type' => 'wysiwyg',
       'options' => array(
-        'wpautop' => true,
-        'media_buttons' => false,
-        'teeny' => true,
+        // 'wpautop' => true,
+        // 'media_buttons' => false,
+        // 'teeny' => true,
       )
     )
   );

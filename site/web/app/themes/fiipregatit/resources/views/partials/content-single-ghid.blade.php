@@ -74,29 +74,24 @@
 
 
           @if ($guide['after_content'])
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                  <button
-                    class="btn btn-link @if (!$guide['is_after_single']) collapsed @endif"
-                    data-toggle="collapse"
-                    data-target="#collapseThree"
-                    aria-expanded="@if ($guide['is_after_single']) true @else false @endif"
-                    aria-controls="collapseThree">
-                    După eveniment
-                    <i class="fa fa-chevron-down pull-right"></i>
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseThree"
-                class="collapse @if ($guide['is_after_single']) show @endif">
-                <div class="card-body">
-                  {!! $guide['after_content'] !!}
-                </div>
-              </div>
-            </div>
+            @include('partials/components/guide-section', [
+              'id' => 'AfterContent',
+              'isCollapsed' => $guide['is_after_single'],
+              'title' => 'După eveniment',
+              'content' => $guide['after_content']
+              // 'bg' => '#fff'
+            ])
           @endif
+
+          @foreach ($guide['sections'] as $section)
+            @include('partials/components/guide-section', [
+              'id' => md5($section['name']),
+              'isCollapsed' => true,
+              'title' => $section['name'],
+              'content' => $section['content'],
+              // 'bg' => '#fff'
+            ])
+          @endforeach
 
           @if ($guide['has_extra_info'])
             <div class="card">

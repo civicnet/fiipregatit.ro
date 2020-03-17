@@ -6,6 +6,7 @@ final class Constants {
     private function __construct() {}
 
     const POST_TYPE_GUIDE = 'ghid';
+    const POST_TYPE_GUIDE_SECTION = 'sectiune_ghid';
     const POST_TYPE_CAMPAIGN = 'campanie';
     const POST_TYPE_LINK = 'link_util';
 

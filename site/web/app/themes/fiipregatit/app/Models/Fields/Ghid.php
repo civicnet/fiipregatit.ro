@@ -75,6 +75,20 @@ $guide
   ->setInstructions('Dacă doriți să includeți tutoriale video, puteți face asta aici. E suficient să introduceți un link de YouTube sau Vimeo către video-ul care trebuie afișat.');
 
 $guide
+  ->addRelationship('additional_sections', [
+    'label' => 'Alte secțiuni',
+    'post_type' => array(
+      0 => Constants::POST_TYPE_GUIDE_SECTION,
+    ),
+    'taxonomy' => array(),
+    'allow_null' => 1,
+    'multiple' => 1,
+    'return_format' => 'object',
+    'ui' => 1,
+  ])
+  ->setInstructions('Dacă doriți, puteți alege ce alte secțiuni să fie afișate în ghidul acesta.');
+
+$guide
   ->addFile('pdf', [
     'label' => 'Ghid PDF',
     'return_format' => 'array',
@@ -110,5 +124,6 @@ $guide
     'ui' => 1,
   ])
   ->setInstructions('Dacă doriți, puteți alege ce alte ghiduri să fie afișate mai proeminent împreună cu ghidul acesta.');
+
 
 return $guide;

@@ -21,6 +21,18 @@ class Ghid extends Controller {
       (array) get_post_meta($guide->ID, Constants::GUIDE_METABOX_GALLERY, 1)
     );
 
+    $sections = get_field('additional_sections', $guide->ID);
+    if (is_array($sections)) {
+      $sections = array_map(function($section) {
+        return [
+          'name' => get_field('name', $section->ID),
+          'content' => get_field('content', $section->ID),
+        ];
+      }, $sections);
+    } else {
+      $sections = [];
+    }
+
     return [
       'title' => get_field('name', $guide->ID),
       'before_content' => get_field('before', $guide->ID),
@@ -47,6 +59,7 @@ class Ghid extends Controller {
       'pdf_guide' =>  get_field('pdf', $guide->ID),
       'pdf_size' => FileUtils::getHumanSize(get_field('pdf', $guide->ID)['url']),
       'sidebar_links' => $sidebarLinks,
+      'sections' => $sections,
     ];
   }
 }
