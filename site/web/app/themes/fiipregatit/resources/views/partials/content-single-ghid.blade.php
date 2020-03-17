@@ -230,7 +230,7 @@
 @include('partials.guide-section', [
   'show_count' => 4,
   'show_button' => false,
-  'title' => 'COVID-19',
+  'title' => 'Ghiduri COVID-19',
   'bg' => '#fff',
   'category' => 'covid-19',
 ])
