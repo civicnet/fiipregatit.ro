@@ -370,3 +370,5 @@ add_action('cmb2_init', function () {
     )
   );
 });
+
+include_once('Config/AdminDashboard.php');

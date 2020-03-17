@@ -13,3 +13,15 @@ h5,
 h6 {
   font-family: Merriweather, serif;
 }
+
+#jumbotron-alert {
+  padding: 16px;
+  background-color: #fc0;
+  color: #1c1c1c;
+  width: 100%;
+  min-height: 56px;
+}
+
+#jumbotron-alert p {
+  margin: 0;
+}
