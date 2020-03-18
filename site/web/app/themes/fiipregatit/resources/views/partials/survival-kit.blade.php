@@ -1,7 +1,7 @@
  <div class="container-fluid" id="plan-personal-section">
     <div class="container">
       <h2>Plan Personal</h2>
-      <div class="row align-items-center trusa-row">
+      <div class="row align-items-center trusa-row" style="padding-bottom: 65px">
         <div class="col d-none d-sm-block img-container">
           <a href="/plan-personal">
             <img
