@@ -127,12 +127,12 @@
             <img src="@asset('images/CivicNetLogoNegative.svg')" alt="Logo CivicNet" style="margin: 0 auto" />
           </a>
           <a
-            href="https://github.com/civicnet/fiipregatit.ro"
+            href="https://civicnet.ro/#donate"
             target="_blank"
             class="contribute"
             style="text-transform: capitalise; font-size: 12px; width: 150px; margin: 0 auto; display: block">
-            <i class="fab fa-github"></i>
-            Contribuie si tu
+            <i class="fal fa-hand-heart"></i>
+            Contribuie și tu
           </a>
         </div>
     </div>
