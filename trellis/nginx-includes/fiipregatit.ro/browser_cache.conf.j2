@@ -1,0 +1,6 @@
+map $sent_http_content_type $expires {
+    default         off;
+    application/pdf @03h30m;
+    ~image/         @03h30m;
+}
+expires $expires;
