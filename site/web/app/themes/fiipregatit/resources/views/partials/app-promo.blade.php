@@ -3,14 +3,13 @@
     <div class="row align-items-center">
       <div class="col d-none d-sm-block ">
         <img
-          src="@asset('images/app_mobil_dsu.jpg')"
+          src="@asset('images/app_mobil_dsu_covid_large.jpg')"
           class="img-fluid"
           alt="Aplicația mobile DSU">
       </div>
       <div class="col">
-        <h2>
-          Află primul despre alerte din trafic, avertizări meteo
-          sau calamități naturale
+        <h2 style="font-size: 1.7rem">
+          Află primul alerte, informări, recomandări ale autorităților despre situații de urgență
         </h2>
         <div class="app-intro">
           <div class="subtitle">
