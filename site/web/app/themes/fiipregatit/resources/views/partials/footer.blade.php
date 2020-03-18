@@ -11,6 +11,9 @@
           <?php
             $pages = get_pages();
             foreach ($pages as $page) {
+              if ($page->post_title === 'Homepage') {
+                continue;
+              }
           ?>
             <li>
               <a href="<?=get_permalink($page->ID);?>" class="mobile-block-link">
