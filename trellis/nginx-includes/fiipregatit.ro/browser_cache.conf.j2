@@ -1,6 +1,7 @@
-map $sent_http_content_type $expires {
-    default         off;
-    application/pdf @03h30m;
-    ~image/         @03h30m;
+location ~*  \.(jpg|jpeg|png|gif|ico|css|js|svg)$ {
+  expires 365d;
 }
-expires $expires;
+
+location ~*  \.(pdf)$ {
+  expires 30d;
+}
