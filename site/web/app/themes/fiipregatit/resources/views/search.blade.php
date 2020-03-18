@@ -1,18 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+  @include('partials.jumbotron',
+  ['show_header' => false])
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
+<div class="container" id="search-page-section">
+  <div class="row justify-content-center">
+  	<div id="ais-wrapper" class="col-lg-8 col-sm-12">
+  		<main id="ais-main">
+  			<div id="algolia-hits">
+        </div>
+  			<div id="algolia-pagination"></div>
+  		</main>
+  	</div>
+  </div>
+</div>
 
-  @while(have_posts()) @php the_post() @endphp
-    @include('partials.content-search')
-  @endwhile
+<script type="text/html" id="tmpl-instantsearch-blank">
+  @include('partials.404-section')
+</script>
 
-  {!! get_the_posts_navigation() !!}
+@verbatim
+  <script type="text/html" id="tmpl-instantsearch-hit">
+      <div class="ais-hits--content">
+        <h4 itemprop="name headline">
+          <a
+            href="{{ data.permalink }}"
+            title="{{ data.title }}"
+            itemprop="url"
+            style="display:block; margin-bottom: 8px;">
+            {{{ data._highlightResult.title.value }}}
+          </a>
+          <div class="content-label badge">
+            {{ data.type }}
+          </div>
+        </h4>
+        <div class="excerpt">
+          <p>
+          <# if (data._snippetResult['content']) { #>
+            <span class="suggestion-post-content">{{{ data._snippetResult['content'].value }}}</span>
+          <# } #>
+          </p>
+        </div>
+      </div>
+      <div class="ais-clearfix"></div>
+    </script>
+  @endverbatim
+
 @endsection
