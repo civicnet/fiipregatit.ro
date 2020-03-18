@@ -96,7 +96,7 @@
               <div class="copyright">
                 <h4>Departamentul pentru Situații de Urgență</h4>
                 <div class="sub">
-                  Toate drepturile rezervate &copy; 2020
+                  Toate drepturile rezervate &copy; 2017 - 2020
                 </div>
               </div>
             </li>
