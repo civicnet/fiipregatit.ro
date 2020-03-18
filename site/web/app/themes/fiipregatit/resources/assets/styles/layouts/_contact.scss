@@ -14,11 +14,16 @@
 
 #contact-section .contact-info-text a {
   color: #333;
+  font-weight: normal;
+}
+
+#contact-section .contact-info-text a.bold {
   font-weight: bold;
 }
 
 #contact-section .contact-info-text a:hover {
   text-decoration: none;
+  text-decoration: underline;
 }
 
 #contact-section .all-button {
