@@ -45,20 +45,16 @@
 
       <div class="col contact col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="header">
-          Contact
+          COVID-19
         </div>
         <div class="footer-address">
-          Adresă:
-          <a
-            href="https://maps.google.com?q=Piața+Revoluției+nr.1+A+sector+1+București"
-            rel="nofollow"
-            target="_blank">
-            Piața Revoluției, nr.1 A, sector 1, București
-          </a><br/>
-          Telefon <strong><a href="tel:021.312.25.47">021.312.25.47</a></strong><br/>
-          Centrala <a href="tel:021.303.70.80">021.303.70.80</a><br/><br/>
+          <div style="color: #fc0">doar pentru informații și recomandări</div>
+          România <strong><a href="tel:0800800358">0800 800 358</a></strong><br/>
+          Diaspora <strong><a href="tel:0040213202020">+40 21 320 20 20</a></strong><br/> (tarif normal în orice rețea) <br/><br/>
 
-          Fax: 021.313.71.55/021.264.86.46<br/>
+          <span>Departamentul pentru Situații de Urgență</span><br/>
+          Telefon <strong><a href="tel:021.312.25.47">021.312.25.47</a></strong><br/>
+          Centrala <strong><a href="tel:021.303.70.80">021.303.70.80</a></strong><br/>
           E-mail: <strong><a href="mailto:dsu@mai.gov.ro">dsu@mai.gov.ro</a></strong><br/>
         </div>
       </div>
