@@ -8,9 +8,11 @@ use App\File\FileUtils;
 
 class Campanie extends Controller
 {
-  public static function get(): array
+  public static function get($campaign = null): array
   {
-    $campaign = get_post();
+    if (!$campaign) {
+      $campaign = get_post();
+    }
 
     $attachments = array_filter(
       (array) get_post_meta(

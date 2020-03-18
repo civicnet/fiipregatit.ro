@@ -67,7 +67,6 @@
         "wpackagist-plugin/advanced-custom-fields",
         "wpackagist-plugin/simple-custom-post-order",
         "wpackagist-plugin/simple-page-ordering",
-        "wpackagist-plugin/wp-search-with-algolia",
         "wpackagist-plugin/cmb2",
         "wpackagist-plugin/pirate-forms",
         "wpackagist-plugin/wordpress-importer"

@@ -7,8 +7,10 @@ use App\Config\Constants;
 use App\File\FileUtils;
 
 class Ghid extends Controller {
-  public static function get(): array {
-    $guide = get_post();
+  public static function get($guide = null): array {
+    if (!$guide) {
+      $guide = get_post();
+    }
 
     $guideCategories = get_the_category();
     $currentCategory = null;
@@ -76,6 +78,8 @@ class Ghid extends Controller {
       'sidebar_links' => $sidebarLinks,
       'sections' => $sections,
       'is_licensed' => get_field('is_licensed', $guide->ID),
+      'icon' =>  get_field('icon', $guide->ID),
+      'permalink' => get_permalink($guide->ID),
     ];
   }
 }

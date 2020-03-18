@@ -112,3 +112,56 @@ add_filter('upload_mimes', function ($mime_types = array()) {
   $mime_types['svg']  = 'image/svg+xml';
   return $mime_types;
 });
+
+/**
+ * Algolia Custom Index
+ */
+$algoliaAttributesCallback = function(array $attributes, \WP_Post $post) {
+  return Algolia\IndexCustomFields::get($post, $attributes)->index();
+};
+
+// https://www.algolia.com/doc/api-reference/settings-api-parameters/
+$algoliaSettingsCallback = function(array $settings) {
+  return array(
+    'searchableAttributes' => array(
+      'unordered(title)',
+      'unordered(content)',
+    ),
+    'attributesToRetrieve' => array(
+      'type',
+      'title',
+      'content',
+      'image',
+      'permalink',
+      'weight',
+    ),
+    'customRanking' => array(
+        'desc(post_modified)',
+        'desc(weight)',
+        'desc(post_date)',
+    ),
+    'attributeForDistinct'  => 'post_id',
+    'distinct'              => true,
+    'attributesForFaceting' => array(),
+    'attributesToSnippet' => array(
+        'title:30',
+        'content:30',
+    ),
+    'snippetEllipsisText' => '…',
+    /* 'attributesToHighlight' => array(
+      'title',
+    ), */
+  );
+};
+
+
+add_filter('algolia_post_shared_attributes', $algoliaAttributesCallback, 10, 2);
+add_filter('algolia_searchable_post_shared_attributes', $algoliaAttributesCallback, 10, 2);
+add_filter('algolia_posts_index_settings', $algoliaSettingsCallback);
+
+$algoliaContentCallback = function(string $post_content, \WP_Post $post) {
+  return Algolia\IndexCustomFields::get($post)->getContent();
+};
+
+add_filter('algolia_searchable_post_content', $algoliaContentCallback, 10, 2);
+add_filter('algolia_post_content', $algoliaContentCallback, 10, 2);

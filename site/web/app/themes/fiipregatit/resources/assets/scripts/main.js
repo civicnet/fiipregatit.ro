@@ -1,5 +1,7 @@
 // import external dependencies
 import 'jquery';
+
+// import 'algoliasearch';
 // import 'instantsearch.js';
 
 // Import everything from autoload
