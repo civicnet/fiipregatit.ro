@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "241cafa1de96579eb8dfd6ae9a1cfe16",
+    "content-hash": "ce74b911ee2e91091fc2c9307eb3a17e",
     "packages": [
         {
             "name": "composer/installers",
@@ -719,6 +719,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-cerber/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-fastest-cache",
+            "version": "0.9.0.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-fastest-cache/",
+                "reference": "tags/0.9.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.0.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-fastest-cache/"
         },
         {
             "name": "wpackagist-plugin/wp-search-with-algolia",
