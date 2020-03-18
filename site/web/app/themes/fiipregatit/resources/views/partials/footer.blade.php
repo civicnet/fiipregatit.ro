@@ -75,12 +75,6 @@
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/dsuromania"  rel="nofollow" target="_blank">
-              <i class="fab fa-twitter-square"></i>
-              Twitter
-            </a>
-          </li>
-          <li>
             <a href="https://www.youtube.com/channel/UC5qTBf9rEFj2UdxNEQOzlxA"  rel="nofollow" target="_blank">
               <i class="fab fa-youtube-square"></i>
               YouTube
