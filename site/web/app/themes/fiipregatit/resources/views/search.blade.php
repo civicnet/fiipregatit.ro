@@ -2,12 +2,13 @@
 
 @section('content')
   @include('partials.jumbotron',
-  ['show_header' => false])
+  ['show_header' => false, 'isSearchPage' => true])
 
 <div class="container" id="search-page-section">
   <div class="row justify-content-center">
   	<div id="ais-wrapper" class="col-lg-8 col-sm-12">
   		<main id="ais-main">
+        <div id="algolia-stats"></div>
   			<div id="algolia-hits">
         </div>
   			<div id="algolia-pagination"></div>
@@ -32,7 +33,7 @@
             {{{ data._highlightResult.title.value }}}
           </a>
           <div class="content-label badge">
-            {{ data.type }}
+            Ghid
           </div>
         </h4>
         <div class="excerpt">

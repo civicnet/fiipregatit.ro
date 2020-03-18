@@ -7,11 +7,10 @@ export default {
     // JavaScript to be fired on the about us page
   },
   finalize() {
-    console.log('HGERE')
-    jQuery(function() {
+    // jQuery(function() {
       const algolia = window.algolia;
 
-      if(jQuery('#s').length > 0) {
+      if(jQuery('#algolia-search-box').length > 0) {
         if (algolia.indices.posts_ghid === undefined && jQuery('.admin-bar').length > 0) {
           console.warn('Posts not indexed');
         }
@@ -19,12 +18,10 @@ export default {
         /* Instantiate instantsearch.js */
         var search = instantsearch({
           searchClient: algoliasearch(algolia.application_id, algolia.search_api_key),
-          appId: algolia.application_id,
-          apiKey: algolia.search_api_key,
           indexName: algolia.indices.posts_ghid.name,
           urlSync: {
             mapping: {'q': 's'},
-            trackedParameters: ['query'],
+            trackedParameters: ['s'],
           },
           /* searchParameters: {
             facetingAfterDistinct: true,
@@ -35,28 +32,29 @@ export default {
 
         /* Search box widget */
         search.addWidgets([
+          instantsearch.widgets.searchBox({
+            container: '#algolia-search-box',
+            placeholder: 'Scrie aici, de ex: furtună, cutremur',
+            wrapInput: false,
+            poweredBy: true,
+            showReset: false,
+            cssClasses: {
+              form: 'search-form-instantsearch',
+            },
+          }),
           instantsearch.widgets.configure({
             'facetingAfterDistinct': true,
             'highlightPreTag': '__ais-highlight__',
             'highlightPostTag': '__/ais-highlight__',
           }),
-          instantsearch.widgets.searchBox({
-            container: '#s',
-            placeholder: 'Scrie aici, de ex: furtună',
-            wrapInput: false,
-            poweredBy: true,
-          }),
           instantsearch.widgets.stats({
             container: '#algolia-stats',
             autoHideContainer: true,
             templates: {
-              body: function(obj) {
-                if (!obj.query) {
-                  return '<h2>Nu ai căutat nimic încă</h2>';
-                }
-
-                return '<h2><em>' + _.escape(obj.nbHits) + '</em>' + ' rezultate pentru <em>"' + _.escape(obj.query) + '"</em></h2>';
-              },
+              text: `
+                {{#hasOneResult}}<h2>Un rezultat</h2>{{/hasOneResult}}
+                {{#hasManyResults}}<h2>{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} rezultate găsite {{#query}} pentru "<em>{{query}}</em>" </h2>{{/query}}{{/hasManyResults}}
+              `,
             },
           }),
           instantsearch.widgets.hits({
@@ -103,8 +101,8 @@ export default {
 
         /* Start */
         search.start();
-        jQuery('#s input').attr('type', 'search').select();
+        // jQuery('#s input').attr('type', 'search').select();
       }
-    });
+    // });
   },
 };

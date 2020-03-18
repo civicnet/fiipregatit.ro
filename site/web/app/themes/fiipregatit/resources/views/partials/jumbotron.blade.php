@@ -13,7 +13,11 @@
           <h1 class="subtitle">situații de urgență</h1>
         @endif
         <div class="align-self-center">
-          @include('partials.search-form')
+          @if (isset($isSearchPage) && $isSearchPage)
+            @include('partials.search-form-instantsearch')
+          @else
+            @include('partials.search-form')
+          @endif
         </div>
       </div>
     </div>
