@@ -36,7 +36,6 @@ $guide
   ->addTrueFalse('is_licensed', [
     'label' => 'Licențiat?',
   ])
-  ->setRequired()
   ->setInstructions('Ghidurile licențiate vor include un link către Creative Commons - Attribution-NonCommercial-ShareAlike 4.0');
 
 $guide
