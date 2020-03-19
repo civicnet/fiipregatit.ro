@@ -14,7 +14,7 @@
           <img src="{{ $partener['logo_partener'] }}" class="despre-logo-partener" alt="{{ $partener['name'] }}"/>
         </div>
         <div class="col-lg-8 col-sm-12">
-          {{ $partener['descriere_partener'] }}
+          {!! $partener['descriere_partener'] !!}
         </div>
       </div>
     @endforeach
