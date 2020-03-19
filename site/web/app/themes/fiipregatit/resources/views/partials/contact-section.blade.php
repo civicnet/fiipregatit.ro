@@ -7,7 +7,7 @@
       <div class="contact-info-text col-md-6 col-xs-12">
         <div style="width: 80%; margin: 0 auto">
           <h3 style="margin-bottom: 30px; font-size: 1.55rem">Pentru COVID-19</h3>
-          Numere de mai jos sunt <span style="color: #933">doar pentru informații și recomandări</span>
+          Numerele de mai jos sunt <span style="color: #933">doar pentru informații și recomandări</span>
           despre COVID-19.
           <br/><br/>
           <strong>România: <a href="tel:0800800358" class="bold">0800 800 358</a></strong> (gratuit)<br/>
