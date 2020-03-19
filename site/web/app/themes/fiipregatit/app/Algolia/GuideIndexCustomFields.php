@@ -44,7 +44,7 @@ final class GuideIndexCustomFields extends IndexCustomFields {
     }
 
     foreach ($this->data['sections'] as $value) {
-      $results[] = $value;
+      $results[] = $value['content'];
     }
 
     return implode(' ', $results);
