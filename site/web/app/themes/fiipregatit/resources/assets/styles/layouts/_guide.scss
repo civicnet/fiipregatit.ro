@@ -170,7 +170,29 @@
   height: 375px;
 }
 
-#guide-content ul li a {
+#guide-content .download-guide a {
+  color: #333;
+  text-transform: uppercase;
+}
+
+#guide-content .guide-sidebar ul li a {
+  color: #333;
+  font-size: 16px;
+  text-decoration: capitalize;
+}
+
+#guide-content .download-guide a:hover {
+  color: #d03233;
+  text-decoration: none;
+}
+
+#guide-content .guide-sidebar ul li a:hover {
+  color: #d03233;
+  font-size: 16px;
+  text-decoration: capitalize;
+}
+
+#guide-content #accordion ul li a {
   font-size: 16px;
   text-decoration: underline;
 }
@@ -192,21 +214,11 @@
   padding-left: 12px;
 }
 
-#guide-content .download-guide a {
-  color: #333;
-  text-transform: uppercase;
-}
-
 #guide-content .download-guide .pdf-icon {
   color: #d03233;
   margin-right: 15px;
   transform: translate(10px, 10px);
   font-size: 36px;
-}
-
-#guide-content .download-guide a:hover {
-  color: #d03233;
-  text-decoration: none;
 }
 
 #guide-content #accordion .carousel-item a {
