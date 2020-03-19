@@ -3,12 +3,10 @@
       <h2>Plan Personal</h2>
       <div class="row align-items-center trusa-row" style="padding-bottom: 65px">
         <div class="col d-none d-sm-block img-container">
-          <a href="/plan-personal">
-            <img
-              src="@asset('images/fiipregatit_planpersonal_colaj_v1.png')"
-              class="img-fluid"
-              alt="Trsuă de supraviețuire"/>
-          </a>
+          <img
+            src="@asset('images/fiipregatit_planpersonal_colaj_v1.png')"
+            class="img-fluid"
+            alt="Plan Personal"/>
         </div>
         <div class="col">
           <div class="headline">
