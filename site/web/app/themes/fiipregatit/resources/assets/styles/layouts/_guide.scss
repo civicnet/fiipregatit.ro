@@ -189,7 +189,8 @@
 #guide-content .guide-sidebar ul li a:hover {
   color: #d03233;
   font-size: 16px;
-  text-decoration: capitalize !important;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
 #guide-content #accordion ul li a {
