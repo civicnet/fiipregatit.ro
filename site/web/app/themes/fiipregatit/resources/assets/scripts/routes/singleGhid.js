@@ -1,4 +1,5 @@
 import autocomplete from './algolia/autocomplete'
+import capitalize from '../util/capitalize';
 
 export default {
   init() {
@@ -6,5 +7,20 @@ export default {
   },
   finalize() {
     autocomplete.init();
+
+    jQuery('#accordion .card-header button').each(function (idx, element) {
+      element.addEventListener('click', function (e) {
+        const accordionAction = e.target.getAttribute('aria-expanded') === 'true' ? 'collapse' : 'expand';
+        const guideSection = e.target.innerText;
+        const currentGuide = capitalize(jQuery('h2')[0].innerText);
+
+        if ('ga' in window) {
+          const tracker = window.ga.getAll()[0];
+          if (tracker) {
+            tracker.send('event', currentGuide, accordionAction, guideSection);
+          }
+        }
+      })
+    })
   },
 };
