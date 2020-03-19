@@ -14,6 +14,8 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import search from './routes/search';
 import pageTemplate from './routes/anyPage';
+import singleGhid from './routes/singleGhid';
+import singleCampanie from './routes/singleCampanie';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -24,6 +26,8 @@ const routes = new Router({
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
   pageTemplate,
+  singleGhid,
+  singleCampanie,
   search,
 });
 
