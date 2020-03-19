@@ -1,0 +1,65 @@
+{% extends 'roles/wordpress-setup/templates/wordpress-site.conf.j2' %}
+
+ {% block server_basic -%}
+  root  {{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/web;
+  index index.php index.htm index.html;
+  # add_header Fastcgi-Cache $upstream_cache_status;
+
+  # Specify a charset
+  charset utf-8;
+
+  # Set the max body size equal to PHP's max POST size.
+  client_max_body_size {{ php_post_max_size | default('25m') | lower }};
+
+  {% if env == 'development' -%}
+  # https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#virtualbox
+  sendfile off;
+
+  {% endif -%}
+  {% endblock -%}
+
+  {% block https -%}
+  {% if ssl_enabled -%}
+  # SSL configuration
+  # include h5bp/directive-only/ssl.conf;
+  ssl_protocols TLSv1.2; # TLSv1.3;
+  ssl_ciphers EECDH+AESGCM:EDH+AESGCM;
+  ssl_prefer_server_ciphers on;
+  ssl_session_cache    shared:SSL:10m; # a 1mb cache can hold about 4000 sessions, so we can hold 40000 sessions
+  ssl_session_timeout  10m;
+  keepalive_timeout 300s; # up from 75 secs default
+  ssl_session_tickets off;
+  ssl_ecdh_curve  secp384r1;
+
+  {% if ssl_stapling_enabled -%}
+  include h5bp/directive-only/ssl-stapling.conf;
+  {% endif -%}
+
+  ssl_dhparam /etc/nginx/ssl/dhparams.pem;
+  ssl_buffer_size 1400; # 1400 bytes to fit in one MTU
+
+  {% if item.value.ssl.provider | default('manual') != 'self-signed' -%}
+  add_header Strict-Transport-Security "max-age={{ [hsts_max_age, hsts_include_subdomains, hsts_preload] | reject('none') | join('; ') }}";
+  {% endif -%}
+
+  {% if item.value.ssl.client_cert_url is defined -%}
+  ssl_verify_client       on;
+  ssl_client_certificate  {{ nginx_ssl_path }}/client-{{ (item.value.ssl.client_cert_url | hash('md5'))[:7] }}.crt;
+  {% endif -%}
+
+  {% if item.value.ssl.provider | default('manual') == 'manual' and item.value.ssl.cert is defined and item.value.ssl.key is defined -%}
+  ssl_certificate         {{ nginx_path }}/ssl/{{ item.value.ssl.cert | basename }};
+  ssl_certificate_key     {{ nginx_path }}/ssl/{{ item.value.ssl.key | basename }};
+
+  {% elif item.value.ssl.provider | default('manual') == 'letsencrypt' -%}
+  ssl_certificate         {{ nginx_path }}/ssl/letsencrypt/{{ item.key }}-{{ letsencrypt_cert_ids[item.key] }}-bundled.cert;
+  ssl_certificate_key     {{ nginx_path }}/ssl/letsencrypt/{{ item.key }}.key;
+
+  {% elif item.value.ssl.provider | default('manual') == 'self-signed' -%}
+  ssl_certificate         {{ nginx_path }}/ssl/{{ item.key }}.cert;
+  ssl_trusted_certificate {{ nginx_path }}/ssl/{{ item.key }}.cert;
+  ssl_certificate_key     {{ nginx_path }}/ssl/{{ item.key }}.key;
+
+  {% endif -%}
+  {% endif -%}
+  {% endblock -%}
