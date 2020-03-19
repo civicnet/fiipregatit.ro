@@ -23,7 +23,7 @@
   # SSL configuration
   # include h5bp/directive-only/ssl.conf;
   ssl_protocols TLSv1.2; # TLSv1.3;
-  ssl_ciphers EECDH+AESGCM:EDH+AESGCM;
+  ssl_ciphers ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384;
   ssl_prefer_server_ciphers on;
   ssl_session_cache    shared:SSL:10m; # a 1mb cache can hold about 4000 sessions, so we can hold 40000 sessions
   ssl_session_timeout  10m;
