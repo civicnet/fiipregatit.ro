@@ -1,5 +1,5 @@
 # [fiipregătit.ro](https://fiipregatit.ro)
-<img src="site/web/app/themes/fiipregatit/resources/assets/images/share_fb_default.jpg" />
+<img src="site/web/app/themes/fiipregatit/resources/assets/images/share_fb_default_covid.jpg" />
 
 ## Platforma Națională de Pregătire pentru Situații de Urgență
 
