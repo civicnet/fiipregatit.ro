@@ -236,8 +236,9 @@
 ])
 
 @include('partials.guide-section', [
-  'show_count' => 8,
+  'show_count' => 4,
   'show_button' => false,
+  'title' => 'Alte Situații',
   'category' => null,
   'bg' => '#e4e4e4'
 ])
