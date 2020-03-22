@@ -1,6 +1,6 @@
 module.exports = {
   'extends': 'stylelint-config-standard',
-  "ignoreFiles": ["**/502.html"],
+  "ignoreFiles": ["**/502.html", "**/*.js"],
   'rules': {
     'no-empty-source': null,
     'string-quotes': 'double',
