@@ -26,17 +26,16 @@ class Ghiduri extends Controller {
       }
     }
 
-    $guides = get_posts($query);
     if (!$category) {
-      $guides = array_filter($guides, function ($guide) use ($all_categories) {
-        $post_categories = $guide->post_category;
-        if (!count($post_categories)) {
-          return true;
+      foreach ($all_categories as $currentCategory) {
+        if ($currentCategory->slug === 'covid-19') {
+          $query['category__not_in'] = [$currentCategory->term_id];
+          break;
         }
-
-        return false;
-      });
+      }
     }
+
+    $guides = get_posts($query);
 
     $ret = array();
     foreach ($guides as $guide) {
