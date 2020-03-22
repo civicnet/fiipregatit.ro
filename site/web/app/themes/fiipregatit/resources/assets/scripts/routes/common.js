@@ -20,7 +20,6 @@ export default {
     translationObserver.observe({
       onClientTranslate: (client, lang) => {
         this.logEvent(getAction(client, 'client'), lang)
-        console.log(getAction(client, 'client'), lang);
       },
       onProxyTranslate: (proxy, lang) => {
         this.logEvent(getAction(proxy, 'proxy'), lang);
