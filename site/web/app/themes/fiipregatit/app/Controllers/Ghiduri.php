@@ -12,8 +12,8 @@ class Ghiduri extends Controller {
       'posts_per_page' => $count,
     ];
 
+    $all_categories = get_categories('category');
     if ($category) {
-      $all_categories = get_categories('category');
       foreach ($all_categories as $currentCategory) {
         if ($currentCategory->slug === $category) {
           $query['category'] = $currentCategory->term_id;

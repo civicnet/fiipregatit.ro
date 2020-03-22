@@ -18,20 +18,22 @@ class Ghid extends Controller {
       $currentCategory = $guideCategories[0] ? $guideCategories[0]->slug : null;
     }
 
+    $isFromCategory = true;
     $guides = Ghiduri::get(10, $currentCategory);
-    if (!count($guides) < 3) {
+    if (count($guides) < 3) {
+      $isFromCategory = false;
       $guides = Ghiduri::get(10);
     }
 
     $sidebarLinks = array_map(function($guide) {
       return [
-        'text' => $guide['title'],
+        'text' => ($isFromCategory ? 'Ghid ' : '') . $guide['title'],
         'href' => $guide['permalink'],
       ];
     }, $guides);
 
     $sidebarLinks = array_filter($sidebarLinks, function($link) use ($guide) {
-      return $link['text'] !== get_field('name', $guide->ID);
+      return $link['text'] !== ($isFromCategory ? 'Ghid ' : '') . get_field('name', $guide->ID);
     });
 
     $gallery = array_filter(
