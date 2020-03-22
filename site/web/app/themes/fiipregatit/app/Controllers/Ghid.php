@@ -13,27 +13,32 @@ class Ghid extends Controller {
     }
 
     $guideCategories = get_the_category();
-    $currentCategory = null;
+    $currentCategoryName = null;
+    $currentCategoryID = null;
     if (count($guideCategories)) {
-      $currentCategory = $guideCategories[0] ? $guideCategories[0]->slug : null;
+      $currentCategoryName = $guideCategories[0]->slug;
+      $currentCategoryID = $guideCategories[0]->{cat_ID};
     }
 
-    $isFromCategory = true;
-    $guides = Ghiduri::get(10, $currentCategory);
+    $guides = Ghiduri::get(10, $currentCategoryName);
     if (count($guides) < 3) {
-      $isFromCategory = false;
       $guides = Ghiduri::get(10);
     }
 
-    $sidebarLinks = array_map(function($guide) {
+    $sidebarLinks = array_map(function($guide) use ($currentCategoryID) {
+      $prefix = null;
+      if (count($guide['category'])) {
+        $prefix = $guide['category'][0] === $currentCategoryID ? 'Ghid ' : ' ';
+      }
+
       return [
-        'text' => ($isFromCategory ? 'Ghid ' : '') . $guide['title'],
+        'text' => $prefix . $guide['title'],
         'href' => $guide['permalink'],
       ];
     }, $guides);
 
     $sidebarLinks = array_filter($sidebarLinks, function($link) use ($guide) {
-      return $link['text'] !== ($isFromCategory ? 'Ghid ' : '') . get_field('name', $guide->ID);
+      return $link['text'] !== get_field('name', $guide->ID);
     });
 
     $gallery = array_filter(

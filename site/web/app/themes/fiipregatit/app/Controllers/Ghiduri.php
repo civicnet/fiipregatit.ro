@@ -49,6 +49,7 @@ class Ghiduri extends Controller {
       'permalink' => get_permalink($guide->ID),
       'color' => get_field('color', $guide->ID),
       'id' => $guide->ID,
+      'category' => $guide->post_category,
       'is_svg' => $icon['mime_type'] === 'image/svg+xml',
       'count_videos' => get_field('video', $guide->ID) ? 1 : 0,
       'count_photos' => count($images),
