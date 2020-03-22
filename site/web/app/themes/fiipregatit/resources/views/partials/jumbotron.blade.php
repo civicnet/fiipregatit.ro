@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    @if (get_option( 'fiipregatit_alert_text_setting_field' ))
+    @if (get_option( 'fiipregatit_alert_text_setting_field' ) && get_option( 'fiipregatit_alert_severity_setting_field' ) == 1)
       <div id="jumbotron-alert">
         {!! get_option( 'fiipregatit_alert_text_setting_field' ) !!}
       </div>
@@ -23,7 +23,18 @@
     </div>
   </div>
 </div>
-
+<div class="container-fluid">
+  <div class="row">
+@if (get_option( 'fiipregatit_alert_text_setting_field' ) && get_option( 'fiipregatit_alert_severity_setting_field' ) != 1)
+  <div id="jumbotron-alert" class="low-priority">
+  <div class="col-lg-6 col-md-9 col-xs-12">
+  {{ get_option( 'fiipregatit_alert_severity_setting_field' ) }}
+    {!! get_option( 'fiipregatit_alert_text_setting_field' ) !!}
+    </div>
+  </div>
+@endif
+</div>
+</div>
 <script>
   (function ($) {
     $('#search .search-field').focus(function() {

@@ -26,6 +26,25 @@ h6 {
   margin: 0;
 }
 
+#jumbotron-alert.low-priority {
+  padding: 16px;
+  background-color: #ffc;
+  border-bottom: 1px solid #fc0;
+  color: #323232;
+  margin: 0 auto;
+  min-height: 56px;
+  font-size: 0.8rem;
+}
+
+#jumbotron-alert.low-priority div:first-of-type {
+  margin: 0 auto;
+}
+
+#jumbotron-alert.low-priority ul,
+#jumbotron-alert.low-priority ol {
+  padding: 0;
+}
+
 /* Search */
 .suggestion-link .suggestion-post-thumbnail {
   background-size: cover;

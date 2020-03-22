@@ -44,6 +44,17 @@ function fiipregatit_alert_text_markup() {
   );
 }
 
+function fiipregatit_alert_severity_markup() {
+  ?>
+  <input
+    type="checkbox"
+    name="fiipregatit_alert_severity_setting_field"
+    value="1"
+    <?php checked( 1 == get_option('fiipregatit_alert_severity_setting_field')) ?>
+  />
+  <?php
+}
+
 function fiipregatit_alert_section_init() {
   add_settings_section(
     'fiipregatit_alert_setting_section',
@@ -58,9 +69,24 @@ function fiipregatit_alert_section_init() {
     'fiipregatit_alert_text_markup',
     'optiuni-fiipregatit',
     'fiipregatit_alert_setting_section'
- );
+  );
+  register_setting(
+    'optiuni-fiipregatit',
+    'fiipregatit_alert_text_setting_field'
+  );
 
- register_setting( 'optiuni-fiipregatit', 'fiipregatit_alert_text_setting_field' );
+  add_settings_field(
+    'fiipregatit_alert_severity_setting_field',
+    'Important?',
+    'fiipregatit_alert_severity_markup',
+    'optiuni-fiipregatit',
+    'fiipregatit_alert_setting_section'
+  );
+  register_setting(
+    'optiuni-fiipregatit',
+    'fiipregatit_alert_severity_setting_field'
+  );
+
 }
 
 add_action( 'admin_init', 'fiipregatit_alert_section_init' );
