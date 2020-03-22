@@ -1,8 +1,10 @@
 import translationObserver from './translations/observer';
+import isDev from '../util/isDev';
+import * as LogRocket from 'logrocket';
 
 export default {
   init() {
-    // JavaScript to be fired on all pages
+    !isDev && LogRocket.init('9odlte/fiipregatitro');
   },
   logEvent(action, label) {
     if ('ga' in window) {
