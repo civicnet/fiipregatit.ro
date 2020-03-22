@@ -6,8 +6,8 @@
   ['show_header' => true])
 
   @include('partials.guide-section', [
-    'show_count' => 4,
-    'show_button' => true,
+    'show_count' => 8,
+    'show_button' => false,
     'title' => 'Ghiduri COVID-19',
     'category' => 'covid-19',
     'bg' => '#fff'
