@@ -27,6 +27,16 @@ class Ghiduri extends Controller {
     }
 
     $guides = get_posts($query);
+    if (!$category) {
+      $guides = array_filter($guides, function ($guide) use ($all_categories) {
+        $post_categories = $guide->post_category;
+        if (!count($post_categories)) {
+          return true;
+        }
+
+        return false;
+      });
+    }
 
     $ret = array();
     foreach ($guides as $guide) {
