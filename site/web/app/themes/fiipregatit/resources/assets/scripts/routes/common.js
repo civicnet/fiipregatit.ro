@@ -4,7 +4,7 @@ import * as LogRocket from 'logrocket';
 
 export default {
   init() {
-    !isDev && LogRocket.init('9odlte/fiipregatitro');
+    !isDev() && LogRocket.init('9odlte/fiipregatitro');
   },
   logEvent(action, label) {
     if ('ga' in window) {
