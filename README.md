@@ -1,7 +1,9 @@
-# [fiipregătit.ro](https://fiipregatit.ro)
-<img src="site/web/app/themes/fiipregatit/resources/assets/images/share_fb_default_covid.jpg" />
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m784577212-43cc893463cb19f7f3c6933f?label=fiipregatit.ro&style=flat-square) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/civicnet/fiipregatit.ro?style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/civicnet/fiipregatit.ro?style=flat-square) ![Maintenance](https://img.shields.io/maintenance/yes/2020?style=flat-square)
 
-## Platforma Națională de Pregătire pentru Situații de Urgență
+# [fiipregătit.ro](https://fiipregatit.ro)
+Platforma Națională de Pregătire pentru Situații de Urgență
+
+<img src="site/web/app/themes/fiipregatit/resources/assets/images/share_fb_default_covid.jpg" />
 
 Soluția propusă a fost dezvoltată în strânsă colaborare cu specialiștii DSU și cuprinde următoarele funcționalități:
 
