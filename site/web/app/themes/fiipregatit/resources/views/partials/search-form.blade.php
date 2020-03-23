@@ -1,4 +1,5 @@
 <form
+  action="/"
   method="get"
   id="search"
   class="search-form">
