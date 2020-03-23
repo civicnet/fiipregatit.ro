@@ -12,7 +12,7 @@ class Ghid extends Controller {
       $guide = get_post();
     }
 
-    $guideCategories = get_the_category();
+    $guideCategories = get_the_category($guide->ID);
     $currentCategoryName = null;
     $currentCategoryID = null;
     if (count($guideCategories)) {

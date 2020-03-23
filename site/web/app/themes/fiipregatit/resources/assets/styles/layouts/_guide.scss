@@ -77,6 +77,30 @@
   padding-bottom: 5px;
 }
 
+#guide-content .download-guide a {
+  color: #333;
+  text-transform: uppercase;
+}
+
+#guide-content .breadcrumbs li {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#guide-content .breadcrumbs li a {
+  font-weight: bold;
+}
+
+#guide-content .breadcrumbs li::after {
+  content: "\00BB";
+  margin: 0 6px;
+}
+
+#guide-content .breadcrumbs li:last-child::after {
+  content: "";
+}
+
 #guide-content #accordion ul li {
   padding-bottom: 12px;
   padding-left: 40px;
@@ -168,11 +192,6 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 375px;
-}
-
-#guide-content .download-guide a {
-  color: #333;
-  text-transform: uppercase;
 }
 
 #guide-content .guide-sidebar ul li a {
