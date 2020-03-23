@@ -16,6 +16,7 @@ import search from './routes/search';
 import pageTemplate from './routes/anyPage';
 import singleGhid from './routes/singleGhid';
 import singleCampanie from './routes/singleCampanie';
+import error404 from './routes/fourOhFour';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -29,6 +30,7 @@ const routes = new Router({
   singleGhid,
   singleCampanie,
   search,
+  error404,
 });
 
 // Load Events
