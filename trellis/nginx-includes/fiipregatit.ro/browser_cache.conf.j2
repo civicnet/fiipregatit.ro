@@ -5,3 +5,11 @@ location ~*  \.(jpg|jpeg|png|gif|ico|css|js|svg)$ {
 location ~*  \.(pdf)$ {
   expires 30d;
 }
+
+location /security.txt {
+  return 301 https://$host/.well-known/security.txt;
+}
+
+location = /.well-known/security.txt {
+  alias /srv/www/fiipregatit.ro/current/.security.txt;
+}
