@@ -1,0 +1,3 @@
+Contact: security@civicnet.ro
+Preferred-Languages: en,ro
+Canonical: https://fiipregatit.ro/.well-known/security.txt
