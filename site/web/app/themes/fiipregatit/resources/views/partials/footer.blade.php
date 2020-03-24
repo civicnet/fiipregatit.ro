@@ -127,8 +127,9 @@
             <img src="@asset('images/CivicNetLogoNegative.svg')" alt="Logo CivicNet" style="margin: 0 auto" />
           </a>
           <a
-            href="https://civicnet.ro/#donate"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y8EACTUDZD8M6&source=url"
             target="_blank"
+            id="contribute-button"
             class="contribute"
             style="text-transform: capitalise; font-size: 12px; width: 150px; margin: 0 auto; display: block">
             <i class="fal fa-hand-heart"></i>
