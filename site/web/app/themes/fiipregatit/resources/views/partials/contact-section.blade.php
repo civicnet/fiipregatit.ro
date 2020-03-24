@@ -26,9 +26,6 @@
           Telefon: <a href="tel:021.312.25.47">021.312.25.47</a><br/>
           Centrala: <a href="tel:021.303.70.80">021.303.70.80</a><br/>
           E-mail: <a href="mailto:dsu@mai.gov.ro">dsu@mai.gov.ro</a><br/>
-          <div style="margin-top: 30px">
-            {!! do_shortcode('[pirate_forms]') !!}
-          </div>
         </div>
       </div>
     </div>
