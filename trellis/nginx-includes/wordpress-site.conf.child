@@ -63,3 +63,5 @@
   {% endif -%}
   {% endif -%}
   {% endblock -%}
+
+  access_log   /var/log/nginx/access.log;
