@@ -265,12 +265,12 @@ server {
   listen 80;
   server_name {{ site_hosts_canonical | union(multisite_subdomains_wildcards) | join(' ') }};
 
+  access_log   /var/log/nginx/access.log;
+  error_log    /srv/www/fiipregatit.ro/logs/error.log;
+
   {{ self.acme_challenge() -}}
 
   {{ self.includes_d() -}}
-
-  access_log   /var/log/nginx/access.log;
-  error_log    /srv/www/fiipregatit.ro/logs/error.log;
 
   location / {
     return 301 https://$host$request_uri;

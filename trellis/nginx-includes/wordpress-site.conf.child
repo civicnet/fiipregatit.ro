@@ -5,6 +5,7 @@
   index index.php index.htm index.html;
   # add_header Fastcgi-Cache $upstream_cache_status;
 
+  access_log   /var/log/nginx/access.log;
   # Specify a charset
   charset utf-8;
 
@@ -64,4 +65,3 @@
   {% endif -%}
   {% endblock -%}
 
-  access_log   /var/log/nginx/access.log;
