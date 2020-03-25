@@ -18,16 +18,11 @@
     </div>
   </div>
   <div class="container">
-    <ul class="breadcrumbs">
-      <li>
-        <a href="{{ $section['guide']['permalink'] }}">
-          Ghid "{{ $section['guide']['title'] }}"
-        </a>
-      </li>
-      <li>
-        {{ $section['title'] }}
-      </li>
-    </ul>
+
+    <a href="{{ $section['guide']['permalink'] }}" class="outline-button guide-section-button">
+      Vezi "{{ $section['guide']['title'] }}"
+    </a>
+
     <div class="row ghid-row">
       <div class="col col-lg-9 col-md-12">
         <div id="accordion">

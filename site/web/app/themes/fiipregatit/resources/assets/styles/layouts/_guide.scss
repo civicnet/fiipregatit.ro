@@ -82,23 +82,19 @@
   text-transform: uppercase;
 }
 
-#guide-content .breadcrumbs li {
+#guide-content a.guide-section-button {
+  user-select: none;
   display: inline-block;
-  font-size: 0.9rem;
-  color: #666;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.25;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 
-#guide-content .breadcrumbs li a {
-  font-weight: bold;
-}
-
-#guide-content .breadcrumbs li::after {
-  content: "\00BB";
-  margin: 0 6px;
-}
-
-#guide-content .breadcrumbs li:last-child::after {
-  content: "";
+#guide-content a.guide-section-button:hover {
+  background-color: #933;
+  text-decoration: none;
 }
 
 #guide-content #accordion ul li {
