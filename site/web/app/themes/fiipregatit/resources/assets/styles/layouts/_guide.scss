@@ -169,6 +169,7 @@
 
 #guide-content #accordion .card-header .collapsed i {
   transform: rotate(0deg);
+  pointer-events: none;
 }
 
 #guide-content #accordion .card-header button.collapsed {
