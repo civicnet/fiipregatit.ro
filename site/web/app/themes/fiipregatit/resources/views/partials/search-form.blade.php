@@ -8,7 +8,7 @@
     class="search-field"
     name="s"
     id="s"
-    placeholder="Scrie aici, de ex: furtună" />
+    placeholder="Caută aici, de ex. coronavirus sau carantină" />
   <button class="btn btn-secondary search-submit" type="submit">
     <i class="fa fa-search" aria-hidden="true"></i>
   </button>

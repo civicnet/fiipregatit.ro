@@ -34,7 +34,7 @@ export default {
         search.addWidgets([
           instantsearch.widgets.searchBox({
             container: '#algolia-search-box',
-            placeholder: 'Scrie aici, de ex: furtună, cutremur',
+            placeholder: 'Caută aici, de ex. coronavirus sau carantină',
             wrapInput: false,
             poweredBy: true,
             showReset: false,
