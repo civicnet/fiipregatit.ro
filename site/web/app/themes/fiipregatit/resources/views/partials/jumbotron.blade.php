@@ -47,40 +47,28 @@
 </script>
 
 @verbatim
-<script type="text/html" id="tmpl-autocomplete-header">
-  <div class="autocomplete-header">
-  	<div class="autocomplete-header-title">
-      <# if ( data.label !== 'Pages' ) { #>
-        {{{ data.label }}}
-      <# } else { #>
-        Pagini
-      <# } #>
-    </div>
-  	<div class="clear"></div>
-  </div>
-</script>
-
 <script type="text/html" id="tmpl-autocomplete-post-suggestion">
   <a class="suggestion-link" href="{{ data.permalink }}" title="{{ data.title }}">
-	  <# if (data.image) { #>
-      <# if (data.type === 'Ghid') { #>
-        <div
-          class="suggestion-post-thumbnail guide-suggestion-thumb"
-          style="background-image: url({{ data.image }})"
-          title="{{ data.title }}">
-        </div>
-      <# } else { #>
-        <div
-          class="suggestion-post-thumbnail"
-          style="background-image: url({{ data.image }})"
-          title="{{ data.title }}">
-        </div>
-	     <# } #>
-    <# } #>
+    <div
+      class="suggestion-post-thumbnail"
+      style="background-image: url({{ data.image }})"
+      title="{{ data.title }}">
+    </div>
 		<div class="suggestion-post-attributes">
-		  <span class="suggestion-post-title">{{{ data._highlightResult.title.value }}}</span>
-		  <# if (data._snippetResult['content']) { #>
-		     <span class="suggestion-post-content">{{{ data._snippetResult['content'].value }}}</span>
+		  <span class="suggestion-post-title">
+        {{ data.type }} &raquo; {{{ data._highlightResult.title.value }}}
+      </span>
+
+		  <# if (data._snippetResult['subtitle']) { #>
+		    <span class="suggestion-post-subtitle">
+          {{{ data._snippetResult['subtitle'].value }}}
+        </span>
+			<# } #>
+
+      <# if (data._snippetResult['content']) { #>
+		    <span class="suggestion-post-content">
+          {{{ data._snippetResult['content'].value }}}
+        </span>
 			<# } #>
 		</div>
   </a>

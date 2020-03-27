@@ -32,20 +32,20 @@ export default {
 
     sources.push({
       source: newHitsSource(client.initIndex(config['index_name']), {
-        hitsPerPage: config['max_suggestions'],
+        hitsPerPage: 4, // config['max_suggestions'],
         attributesToSnippet: [
-        'content:10',
+          'content:30',
+          'subtitle:20',
         ],
         highlightPreTag: '__ais-highlight__',
         highlightPostTag: '__/ais-highlight__',
       }),
       templates: {
         header: function () {
-          return wp.template('autocomplete-header')({
-            label: _.escape(config['label']),
-          });
+          return null;
         },
         suggestion: function (hit) {
+          console.log(hit)
           for (var key in hit._highlightResult) {
             /* We do not deal with arrays. */
             if (typeof hit._highlightResult[key].value !== 'string') {
@@ -63,6 +63,15 @@ export default {
 
             hit._snippetResult[skey].value = _.escape(hit._snippetResult[skey].value);
             hit._snippetResult[skey].value = hit._snippetResult[skey].value.replace(/__ais-highlight__/g, '<em>').replace(/__\/ais-highlight__/g, '</em>');
+          }
+
+          if (config['index_name'] === 'wp_posts_sectiune_ghid'
+            || config['index_name'] === 'wp_posts_ghid') {
+            hit.type = 'Ghid'
+          }
+
+          if (config['index_name'] === 'wp_posts_campanie') {
+            hit.type = 'Campanie'
           }
 
           return suggestion_template(hit);

@@ -125,11 +125,13 @@ $algoliaSettingsCallback = function(array $settings) {
   return array(
     'searchableAttributes' => array(
       'unordered(title)',
+      'unordered(subtitle)',
       'unordered(content)',
     ),
     'attributesToRetrieve' => array(
       'type',
       'title',
+      'subtitle',
       'content',
       'image',
       'permalink',
@@ -145,6 +147,7 @@ $algoliaSettingsCallback = function(array $settings) {
     'attributesForFaceting' => array(),
     'attributesToSnippet' => array(
         'title:30',
+        'subtitle:30',
         'content:30',
     ),
     'snippetEllipsisText' => '…',

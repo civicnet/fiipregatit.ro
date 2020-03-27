@@ -2,8 +2,9 @@
 
 namespace App\Algolia;
 
-final class GuideIndexCustomFields extends IndexCustomFields {
-  private $data = null;
+use App\Config\Constants;
+
+final class GuideSectionIndexCustomFields extends IndexCustomFields {
   protected function getCustomAttributes(): array {
     // Don't leak private posts
     $status = get_post_status($this->post);
@@ -17,7 +18,8 @@ final class GuideIndexCustomFields extends IndexCustomFields {
     $data = $this->getTrimmedData();
     return array_merge(
       array(
-        'weight' => '20',
+        'weight' => '15',
+        'type' => Constants::POST_TYPE_GUIDE,
       ),
       $data
     );
@@ -25,14 +27,11 @@ final class GuideIndexCustomFields extends IndexCustomFields {
 
   public function getContent(): string {
     if (!$this->data) {
-      $this->data = \App\Controllers\Ghid::get($this->post);
+      $this->data = \App\Controllers\SectiuneGhid::get($this->post);
     }
 
     $fieldsToIndex = [
-      'title',
-      'before_content',
-      'during_content',
-      'after_content',
+      'content',
     ];
 
     $results = [];
@@ -43,21 +42,18 @@ final class GuideIndexCustomFields extends IndexCustomFields {
       }
     }
 
-    foreach ($this->data['sections'] as $value) {
-      $results[] = $value['content'];
-    }
-
-    return implode("\n", $results);
+    return implode(' ', $results);
   }
 
   private function getTrimmedData(): array {
     if (!$this->data) {
-      $this->data = \App\Controllers\Ghid::get($this->post);
+      $this->data = \App\Controllers\SectiuneGhid::get($this->post);
     }
 
     return [
       'title' => $this->data['title'],
-      'image' => $this->data['icon']['sizes']['thumbnail'],
+      'subtitle' => $this->data['subtitle'],
+      'image' => $this->data['image'],
       'permalink' => $this->data['permalink'],
     ];
   }

@@ -106,6 +106,10 @@ h6 {
     padding-top: 16px !important;
   }
 
+  .algolia-autocomplete .suggestion-post-subtitle {
+    font-size: 16px !important;
+  }
+
   .algolia-autocomplete .suggestion-link {
     padding: 15px !important;
   }
@@ -123,8 +127,21 @@ h6 {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: bold !important;
-  line-height: 32px;
-  padding-left: 10px;
+  line-height: 16px;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.algolia-autocomplete .suggestion-post-subtitle {
+  font-weight: 700;
+  color: #333;
+  font-size: 13px;
+  font-family: Roboto, sans-serif;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .algolia-autocomplete .suggestion-link {
@@ -133,11 +150,9 @@ h6 {
 }
 
 .algolia-autocomplete .suggestion-post-thumbnail {
-  border: 1px solid #ccc;
-  background: #fff;
-  width: 40px;
-  height: 40px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .algolia-autocomplete .aa-suggestion {
@@ -163,7 +178,10 @@ h6 {
 }
 
 .algolia-autocomplete .suggestion-post-attributes {
-  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  flex: 1;
 }
 
 .algolia-autocomplete .aa-suggestion .suggestion-post-title,
@@ -195,8 +213,8 @@ h6 {
 }
 
 .aa-dropdown-menu a {
-  font-size: 12px;
-  color: #1a1a1a;
+  font-size: 14px;
+  color: #333;
   font-weight: normal;
   text-decoration: none;
 }
@@ -373,10 +391,12 @@ h6 {
 
 .aa-dropdown-menu .aa-suggestion .suggestion-post-content {
   color: #63676d;
-  display: block;
-  white-space: nowrap;
+  display: -webkit-box;
   text-overflow: ellipsis;
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 8px;
 }
 
 .aa-dropdown-menu .aa-suggestion.aa-cursor {
@@ -384,8 +404,10 @@ h6 {
 }
 
 .aa-dropdown-menu a.suggestion-link {
-  display: block;
+  // display: block;
   padding: 0 14px;
+  display: flex;
+  flex: 1;
 }
 
 .aa-dropdown-menu a.suggestion-link.user-suggestion-link {
@@ -403,12 +425,13 @@ h6 {
 }
 
 .aa-dropdown-menu .suggestion-post-thumbnail {
-  float: left;
+  display: flex;
   margin-right: 5px;
   margin-bottom: 5px;
   border-radius: 3px;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 1;
 }
 
 .aa-dropdown-menu .suggestion-user-thumbnail {

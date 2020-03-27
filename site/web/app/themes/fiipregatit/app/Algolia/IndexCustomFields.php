@@ -37,6 +37,11 @@ abstract class IndexCustomFields {
           $attributes,
           $post
         );
+      case Constants::POST_TYPE_GUIDE_SECTION:
+        return new GuideSectionIndexCustomFields(
+          $attributes,
+          $post
+        );
     }
 
     return new NoOpIndexCustomFields($attributes);

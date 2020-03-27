@@ -18,11 +18,13 @@
     </div>
   </div>
   <div class="container">
-
-    <a href="{{ $section['guide']['permalink'] }}" class="outline-button guide-section-button">
-      Vezi "{{ $section['guide']['title'] }}"
-    </a>
-
+    <div class="section-header">
+      <a
+        href="{{ $section['guide']['permalink'] }}"
+        class="outline-button guide-section-button">
+        &laquo; Vezi "{{ $section['title'] }}"
+      </a>
+    </div>
     <div class="row ghid-row">
       <div class="col col-lg-9 col-md-12">
         <div id="accordion">
@@ -30,12 +32,12 @@
             <div class="card-header" id="headingOne">
               <h5 class="mb-0">
                 <button
-                  class="btn btn-link collapsed"
+                  class="btn btn-link"
                   data-toggle="collapse"
                   data-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne">
-                  {{ $section['title'] }}
+                  {{ $section['subtitle'] }}
                   <i class="fa fa-chevron-down pull-right"></i>
                 </button>
               </h5>
@@ -66,6 +68,13 @@
               </p>
             </div>
           @endif
+
+          <a
+            style="margin-top: 16px"
+            href="{{ $section['guide']['permalink'] }}"
+            class="outline-button guide-section-button">
+            &laquo; Vezi "{{ $section['title'] }}"
+          </a>
 
           @if ($section['guide']['pdf_guide'])
             <div class="download-guide">

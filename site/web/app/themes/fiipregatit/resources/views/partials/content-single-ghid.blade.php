@@ -23,55 +23,22 @@
       <div class="col col-lg-9 col-md-12">
         <div id="accordion">
           @if ($guide['before_content'])
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button
-                    class="btn btn-link @if (!$guide['is_before_single']) collapsed @endif"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="@if ($guide['is_before_single']) true @else false @endif"
-                    aria-controls="collapseOne">
-                    Înainte de eveniment
-                    <i class="fa fa-chevron-down pull-right"></i>
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseOne"
-                class="collapse @if ($guide['is_before_single']) show @endif">
-                <div class="card-body">
-                  {!! $guide['before_content'] !!}
-                </div>
-              </div>
-            </div>
+            @include('partials/components/guide-section', [
+              'id' => 'BeforeContent',
+              'isOpen' => $guide['is_before_single'],
+              'title' => 'Înainte de evenimentului',
+              'content' => $guide['before_content']
+            ])
           @endif
 
           @if ($guide['during_content'])
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button
-                    class="btn btn-link @if (!$guide['is_during_single']) collapsed @endif"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="@if ($guide['is_during_single']) true @else false @endif"
-                    aria-controls="collapseTwo">
-                    În timpul evenimentului
-                    <i class="fa fa-chevron-down pull-right"></i>
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseTwo"
-                class="collapse @if ($guide['is_during_single']) show @endif">
-                <div class="card-body">
-                  {!! $guide['during_content'] !!}
-                </div>
-              </div>
-            </div>
+            @include('partials/components/guide-section', [
+              'id' => 'DuringContent',
+              'isOpen' => $guide['is_during_single'],
+              'title' => 'În timpul evenimentului',
+              'content' => $guide['during_content']
+            ])
           @endif
-
 
           @if ($guide['after_content'])
             @include('partials/components/guide-section', [
@@ -79,7 +46,6 @@
               'isOpen' => $guide['is_after_single'],
               'title' => 'După eveniment',
               'content' => $guide['after_content']
-              // 'bg' => '#fff'
             ])
           @endif
 
@@ -89,7 +55,6 @@
               'isOpen' => false,
               'title' => $section['name'],
               'content' => $section['content'],
-              // 'bg' => '#fff'
             ])
           @endforeach
 
