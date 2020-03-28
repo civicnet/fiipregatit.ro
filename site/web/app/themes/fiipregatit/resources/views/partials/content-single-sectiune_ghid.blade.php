@@ -22,7 +22,7 @@
       <a
         href="{{ $section['guide']['permalink'] }}"
         class="outline-button guide-section-button">
-        &laquo; Vezi "{{ $section['title'] }}"
+        &laquo; Vezi "Ghid {{ $section['title'] }}"
       </a>
     </div>
     <div class="row ghid-row">
@@ -73,7 +73,7 @@
             style="margin-top: 16px"
             href="{{ $section['guide']['permalink'] }}"
             class="outline-button guide-section-button">
-            &laquo; Vezi "{{ $section['title'] }}"
+            &laquo; Vezi "Ghid {{ $section['title'] }}"
           </a>
 
           @if ($section['guide']['pdf_guide'])
