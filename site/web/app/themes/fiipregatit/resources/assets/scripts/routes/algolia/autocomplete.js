@@ -32,7 +32,7 @@ export default {
 
     sources.push({
       source: newHitsSource(client.initIndex(config['index_name']), {
-        hitsPerPage: 4, // config['max_suggestions'],
+        hitsPerPage: config['max_suggestions'],
         attributesToSnippet: [
           'content:30',
           'subtitle:20',
