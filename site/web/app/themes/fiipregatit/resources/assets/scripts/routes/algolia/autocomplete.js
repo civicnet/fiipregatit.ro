@@ -100,8 +100,25 @@ export default {
       /* Instantiate autocomplete.js */
       var autocomplete = algoliaAutocomplete($searchInput[0], config, sources)
         .on('autocomplete:selected', function (e, suggestion) {
+
+        if ('ga' in window) {
+          const tracker = window.ga.getAll()[0];
+          if (tracker) {
+            const subtitle = suggestion.subtitle
+              ? `| ${suggestion.subtitle}`
+              : '';
+
+            tracker.send(
+              'event',
+              'Search',
+              `${suggestion.title} ${subtitle}`,
+              jQuery('#search input').val()
+            );
+          }
+        }
+
         /* Redirect the user when we detect a suggestion selection. */
-          window.location.href = suggestion.permalink;
+        window.location.href = suggestion.permalink;
       });
 
       /* Force the dropdown to be re-drawn on scroll to handle fixed containers. */
