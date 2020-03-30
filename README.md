@@ -27,6 +27,23 @@ Preferă pull request-uri peste issues unde e posibil, pull request-urile sunt p
 - Sau contactează-ne prin oricare dintre modalitățile disponibile [pe civicnet.ro](https://civicnet.ro/contact)
 
 ----------
+### Pentru dezvoltatori
+
+Urmărește documentația [Trellis](https://roots.io/docs/trellis/master/local-development/) pentru local development. 
+Dacă lucrez la temă:
+```
+cd site/web/app/theme/fiipregatit/
+yarn 
+yarn start
+```
+
+Vei avea nevoie de un cont [Algolia](https://www.algolia.com/) pentru funcția de căutare. Crează un set de credențiale noi și completează-le în admin. 
+
+Trebuie indexate ghidurile, campaniile și secțiunile de ghid. 
+
+Dacă întâmpini probleme, deschide un issue nou, marcat cu label `question`
+ 
+----------
 
 <div align="center">
 	<br>
