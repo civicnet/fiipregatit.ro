@@ -23,7 +23,6 @@ export default {
 
     observe({
       onClient: (client, lang) => {
-        console.log(client, lang);
         this.logEvent('i18n', getAction(client, 'client'), lang)
       },
       onProxy: (proxy, lang) => {
