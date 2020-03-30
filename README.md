@@ -3,7 +3,7 @@
 # [fiipregătit.ro](https://fiipregatit.ro)
 Platforma Națională de Pregătire pentru Situații de Urgență
 
-<img src="site/web/app/themes/fiipregatit/resources/assets/images/share_fb_default_covid.jpg" />
+<img src="screenshot.png" />
 
 Soluția propusă a fost dezvoltată în strânsă colaborare cu specialiștii DSU și cuprinde următoarele funcționalități:
 
