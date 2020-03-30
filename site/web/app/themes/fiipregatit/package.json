@@ -79,6 +79,7 @@
     "algoliasearch": "^4.1.0",
     "autocomplete.js": "^0.37.1",
     "bootstrap": "v4.3.1",
+    "detect-translation": "^0.0.1",
     "instantsearch.js": "^4.3.1",
     "jquery": "^3.3.1",
     "logrocket": "^1.0.6",

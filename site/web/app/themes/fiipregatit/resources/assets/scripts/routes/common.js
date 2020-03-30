@@ -1,4 +1,4 @@
-import translationObserver from './translations/observer';
+import { observe } from 'detect-translation';
 import isDev from '../util/isDev';
 import * as LogRocket from 'logrocket';
 
@@ -21,11 +21,12 @@ export default {
 
     const getAction = (client, type) => `${client} ${type} translation`;
 
-    translationObserver.observe({
-      onClientTranslate: (client, lang) => {
+    observe({
+      onClient: (client, lang) => {
+        console.log(client, lang);
         this.logEvent('i18n', getAction(client, 'client'), lang)
       },
-      onProxyTranslate: (proxy, lang) => {
+      onProxy: (proxy, lang) => {
         this.logEvent('i18n', getAction(proxy, 'proxy'), lang);
       },
     });

@@ -2633,6 +2633,11 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+detect-translation@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/detect-translation/-/detect-translation-0.0.1.tgz#f55b54db9f5039909916c34728fe43c3eba7e254"
+  integrity sha512-6FoNnsg2BlF0SuEN/xDTD0Tr1H4I3RXOwQPlGO2AEVk3k3XjV8J1+LChQ2n/CbbfQPqbkxDM5zSAMB6BEb/4mw==
+
 dev-ip@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dev-ip/-/dev-ip-1.0.1.tgz#a76a3ed1855be7a012bb8ac16cb80f3c00dc28f0"
