@@ -52,7 +52,7 @@
           @foreach ($guide['sections'] as $section)
             @include('partials/components/guide-section', [
               'id' => md5($section['name']),
-              'isOpen' => false,
+              'isOpen' => count($guide['sections']) === 1,
               'title' => $section['name'],
               'content' => $section['content'],
             ])
