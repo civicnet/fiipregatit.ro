@@ -33,6 +33,15 @@ $guide
   ->setInstructions('Pentru ce fel de eveniment este ghidul (ex: cutremur, viscol, etc.)');
 
 $guide
+  ->addWysiwyg('top_content', [
+    'label' => 'Descriere ghid',
+    'tabs' => 'all',
+    'toolbar' => 'full',
+    'delay' => 'true'
+  ])
+  ->setInstructions('Secțiune afișată înaintea ghidului, sub titlu');
+
+$guide
   ->addTrueFalse('is_licensed', [
     'label' => 'Licențiat?',
   ])
@@ -73,6 +82,15 @@ $guide
     'delay' => 'true'
   ])
   ->setInstructions('Orice alte infomații ajutătoare sub formă de text.');
+
+$guide
+  ->addWysiwyg('bottom_content', [
+    'label' => 'Conținut adițional ghid',
+    'tabs' => 'all',
+    'toolbar' => 'full',
+    'delay' => 'true'
+  ])
+  ->setInstructions('Secțiune afișată după ghid, sub acordeon');
 
 $guide
   ->addOembed('video', [

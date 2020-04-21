@@ -19,6 +19,15 @@
   </div>
   <div class="container">
     <h2>Ghid {{ $guide['title'] }}</h2>
+
+    @if ($guide['top_content'])
+      <div class="row ghid-row">
+        <div class="col col-lg-9 col-md-12" style="padding-bottom: 30px">
+          {!! $guide['top_content'] !!}
+        </div>
+      </div>
+    @endif
+
     <div class="row ghid-row">
       <div class="col col-lg-9 col-md-12">
         <div id="accordion">
@@ -139,6 +148,16 @@
                     @endif
                   </div>
                 </div>
+              </div>
+            </div>
+          @endif
+
+          @if ($guide['bottom_content'])
+            <div class="row ghid-row">
+              <div
+                class="col col-lg-9 col-md-12"
+                style="padding-top: 30px; padding-bottom: 12px">
+                {!! $guide['bottom_content'] !!}
               </div>
             </div>
           @endif

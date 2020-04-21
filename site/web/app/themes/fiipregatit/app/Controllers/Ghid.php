@@ -87,6 +87,8 @@ class Ghid extends Controller {
       'is_licensed' => get_field('is_licensed', $guide->ID),
       'icon' =>  get_field('icon', $guide->ID),
       'permalink' => get_permalink($guide->ID),
+      'top_content' => get_field('top_content', $guide->ID),
+      'bottom_content' => get_field('bottom_content', $guide->ID),
     ];
   }
 }

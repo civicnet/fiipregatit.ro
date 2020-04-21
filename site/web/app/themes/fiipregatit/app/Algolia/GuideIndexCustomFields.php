@@ -33,6 +33,8 @@ final class GuideIndexCustomFields extends IndexCustomFields {
       'before_content',
       'during_content',
       'after_content',
+      'top_content',
+      'bottom_content'
     ];
 
     $results = [];
