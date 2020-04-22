@@ -1,4 +1,4 @@
-![Uptime Robot status](https://img.shields.io/uptimerobot/status/m784577212-43cc893463cb19f7f3c6933f?label=fiipregatit.ro&style=flat-square) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/civicnet/fiipregatit.ro?style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/civicnet/fiipregatit.ro?style=flat-square) ![Maintenance](https://img.shields.io/maintenance/yes/2020?style=flat-square)
+![Uptime Robot status](https://img.shields.io/uptimerobot/ratio/m784577212-43cc893463cb19f7f3c6933f?label=30d%20uptime&style=flat-square) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/civicnet/fiipregatit.ro?style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/civicnet/fiipregatit.ro?style=flat-square) ![Maintenance](https://img.shields.io/maintenance/yes/2020?style=flat-square)
 
 # [fiipregătit.ro](https://fiipregatit.ro)
 Platforma Națională de Pregătire pentru Situații de Urgență
