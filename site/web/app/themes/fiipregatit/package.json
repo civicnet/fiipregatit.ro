@@ -84,6 +84,6 @@
     "jquery": "^3.5.0",
     "logrocket": "^1.0.6",
     "popper.js": "^1.14.7",
-    "underscore": "^1.9.2"
+    "underscore": "^1.12.1"
   }
 }
